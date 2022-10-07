@@ -1,0 +1,113 @@
+@use './partials/variables' as *
+@use './partials/mixins' as *
+@use './partials/breakpoints' as *
+
+
+*, *::before, *::after
+    box-sizing: border-box
+body
+    margin: 0
+    font-family: $normal
+
+
+img
+    max-width: 100%
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+li
+    height: fit-content
+a
+    text-decoration: none
+    color: inherit
+h1, h2, h3
+    font-family: $bold-styled
+    text-transform: uppercase
+    font-size: 2em
+    margin: 0
+p
+    margin: 0
+
+
+.section
+    width: 100%
+    padding: 1em 0
+.container
+    width: 80%
+    max-width: 1200px
+    margin: auto
+.icon
+    width: 2em
+.icon + .icon
+    margin-left: 1em
+
+
+// Global
+.nav
+    background: $yellow
+    &__box
+        display: flex
+        justify-content: space-between
+    &__list
+        display: inline-flex
+        min-width: 42%
+        justify-content: space-around
+    &__item
+        font-family: $bold-styled
+        font-size: min(42px, 4vw)
+        color: $red
+    &__logo
+        display: inline-block
+        width: 128px
+        position: relative
+    &__logo img
+        position: absolute
+.footer
+    text-align: center
+    font-size: 0.8rem
+    &__nav, &__contacts
+        padding: 1em
+    &__nav
+        display: flex
+    @include md
+        .footer__nav
+            display: initial
+            text-align: right
+        .footer__contacts
+            text-align: left
+        .footer__socials
+            justify-content: start
+
+
+// About Us
+.story
+    color: white
+    background-image: url('../assets/spices.jpg')
+    background-position: center
+    padding: 2em
+    font-size: 1.2rem
+    text-align: center
+    @include md
+        font-size: 2rem
+        padding: 2.5em
+.about
+    &--quality
+        background: #351111
+        color: white
+    &--heritage
+        background: #fffbb1
+    &--community
+        background: #2f2f5e
+        color: white
+    &__text
+        padding: 1em
+
+
+@include md
+    .row
+        display: flex
+        justify-content: center
+
+.col
+    width: 100%

@@ -1,162 +1,152 @@
 @font-face {
-    font-family: 'JI Burrito';
-    src: url('../assets/fonts/JI\ Burrito.ttf')
+  font-family: "JI Burrito";
+  src: url("../assets/fonts/JI Burrito.ttf");
 }
-
 *, *::before, *::after {
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-    font-family: sans-serif;
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
 
 img {
-    max-width: 100%;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-li {
-    height: fit-content;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-h1, h2, h3 {
-    font-family: 'JI Burrito';
-    text-transform: uppercase;
-    font-size: 2em;
-    margin: 0;
-}
-p {
-    margin: 0;
+  max-width: 100%;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  height: fit-content;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: "JI Burrito";
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
 
 .section {
-    width: 100%;
-    padding: 1em 0;
+  width: 100%;
+  padding: 1em 0;
 }
+
 .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
 }
+
 .icon {
-    width: 2em;
+  width: 2em;
 }
+
 .icon + .icon {
-    margin-left: 1em;
+  margin-left: 1em;
 }
-
-
 
 .nav {
-    background: #ffe70f;
+  background: #ffe70f;
 }
 .nav__box {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .nav__list {
-    display: inline-flex;
-    min-width: 42%;
-    justify-content: space-around;
+  display: inline-flex;
+  min-width: 42%;
+  justify-content: space-around;
 }
 .nav__item {
-    font-family: 'JI Burrito';
-    font-size: min(42px, 4vw);
-    color: #e00000;
+  font-family: "JI Burrito";
+  font-size: min(42px, 4vw);
+  color: #bc0000;
 }
 .nav__logo {
-    display: inline-block;
-    width: 128px;
-    position: relative;
+  display: inline-block;
+  width: 128px;
+  position: relative;
 }
 .nav__logo img {
-    position: absolute;
+  position: absolute;
 }
 
 .footer {
-    text-align: center;
-    font-size: 0.8rem;
+  text-align: center;
+  font-size: 0.8rem;
 }
 .footer__nav, .footer__contacts {
-    padding: 1em;
+  padding: 1em;
 }
 .footer__nav {
-    display: flex;
+  display: flex;
+}
+@media (min-width: 600px) {
+  .footer .footer__nav {
+    display: initial;
+    text-align: right;
+  }
+  .footer .footer__contacts {
+    text-align: left;
+  }
+  .footer .footer__socials {
+    justify-content: start;
+  }
 }
 
 .story {
-    color: white;
-    background-image: url('../assets/spices.jpg');
-    background-position: center;
-    padding: 2em;
-    font-size: 1.2rem;
-    text-align: center;
+  color: white;
+  background-image: url("../assets/spices.jpg");
+  background-position: center;
+  padding: 2em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .story {
+    font-size: 2rem;
+    padding: 2.5em;
+  }
 }
 
-/* about */
-.about--quality{
-    background: #351111;
-    color: white;
+.about--quality {
+  background: #351111;
+  color: white;
 }
 .about--heritage {
-    background: #fffbb1;
+  background: #fffbb1;
 }
 .about--community {
-    background: #2f2f5e;
-    color: white;
+  background: #2f2f5e;
+  color: white;
 }
 .about__text {
-    padding: 1em;
+  padding: 1em;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* .sm {display: initial; outline: 5px solid none;}
-.md {display: none; outline: 5px solid none;} */
-
-/* breakpoints */
 @media (min-width: 600px) {
-    /* .md {display: initial; outline: 5px solid none;}
-    .sm {display: none; outline: 5px solid none;} */
-
-    .row {
-        display: flex;
-        justify-content: center;
-    }
-    .story {
-        font-size: 2rem;
-        padding: 2.5em;
-    }
-
-    .footer__nav {
-        display: initial;
-        text-align: right;
-    }
-    .footer__contacts {
-        text-align: left;
-    }
-    .footer__socials {
-        justify-content: start;
-    }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
 }
-
 .col {
-    width: 100%;
+  width: 100%;
 }
+
+/*# sourceMappingURL=style.css.map */
