@@ -21,10 +21,10 @@ li
 a
     text-decoration: none
     color: inherit
-h1, h2, h3
-    font-family: $bold-styled
-    text-transform: uppercase
-    font-size: 2em
+h1, h2, h3, h4, h5
+    // font-family: $bold-styled
+    // text-transform: uppercase
+    // font-size: 2em
     margin: 0
 p
     margin: 0
@@ -63,6 +63,7 @@ p
         position: relative
     &__logo img
         position: absolute
+        opacity: 0 // debug
 .footer
     text-align: center
     font-size: 0.8rem
@@ -79,6 +80,62 @@ p
         .footer__socials
             justify-content: start
 
+// Menu
+.menu
+    &__board
+        background: gray
+        color: white
+    &__box
+        border: 2px solid lime
+        padding: 0.5em
+    &__section
+        border: 2px solid black
+        padding: 0.5em
+        margin: 0.5em
+    &__header
+        font: $bold-normal
+        text-transform: uppercase
+        text-align: center
+        width: fit-content
+        margin: auto
+        h2
+        h3
+        h4
+        h5
+    &__text
+    &__label
+        @extend .menu__item
+        color: $yellow
+        font-size: 0.8rem
+        margin-top: auto
+    &__item
+        display: flex
+        justify-content: space-between
+        font-familyS: $bold-normal
+        margin: 0.5em 0
+    &__name
+        width: 50%
+        min-width: 172px
+        // margin-right: auto
+        // white-space: nowrap
+    &__price
+        // margin-left: 1em
+        // background: white
+        // color: black
+        // border-radius: 100%
+        // padding: 0 0.8em
+        // width: 3.5em
+        min-width: 3em
+        text-align: center
+        &--blank
+            opacity: 0
+.breakfast
+.burritos
+.kids
+.platters
+.chicken
+.burgers
+.extra
 
 // About Us
 .story
@@ -108,6 +165,11 @@ p
     .row
         display: flex
         justify-content: center
-
+@include lg
+    .grid
+        display: grid
+        gap: 0.5em
+        grid-template-columns: 1fr 1fr
+        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 .col
     width: 100%
