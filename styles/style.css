@@ -25,6 +25,13 @@ li {
   height: fit-content;
 }
 
+.list {
+  list-style: initial;
+}
+.list li {
+  margin-left: 1em;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -107,49 +114,6 @@ p {
   }
 }
 
-.menu__board {
-  background: gray;
-  color: white;
-}
-.menu__box {
-  border: 2px solid lime;
-  padding: 0.5em;
-}
-.menu__section {
-  border: 2px solid black;
-  padding: 0.5em;
-  margin: 0.5em;
-}
-.menu__header {
-  font: 1em Verdana;
-  text-transform: uppercase;
-  text-align: center;
-  width: fit-content;
-  margin: auto;
-}
-.menu__label {
-  color: #ffe70f;
-  font-size: 0.8rem;
-  margin-top: auto;
-}
-.menu__item, .menu__label {
-  display: flex;
-  justify-content: space-between;
-  font-familyS: 1em Verdana;
-  margin: 0.5em 0;
-}
-.menu__name {
-  width: 50%;
-  min-width: 172px;
-}
-.menu__price {
-  min-width: 3em;
-  text-align: center;
-}
-.menu__price--blank {
-  opacity: 0;
-}
-
 .story {
   color: white;
   background-image: url("../assets/spices.jpg");
@@ -184,13 +148,6 @@ p {
   .row {
     display: flex;
     justify-content: center;
-  }
-}
-@media (min-width: 1100px) {
-  .grid {
-    display: grid;
-    gap: 0.5em;
-    grid-template-columns: 1fr 1fr;
   }
 }
 .col {
