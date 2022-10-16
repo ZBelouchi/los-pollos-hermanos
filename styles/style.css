@@ -1,14 +1,22 @@
 @font-face {
   font-family: "JI Burrito";
-  src: url("../assets/fonts/JI Burrito.ttf");
+  src: url("../assets/fonts/ji-burrito/ji-burrito.ttf");
+}
+@font-face {
+  font-family: "Chivo";
+  src: url("../assets/fonts/chivo/Chivo-Bold.ttf");
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("../assets/fonts/arimo/Arimo-VariableFont_wght.ttf");
 }
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
+  font-family: "Arimo";
 }
 
 img {
@@ -18,7 +26,6 @@ img {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 li {
@@ -27,9 +34,12 @@ li {
 
 .list {
   list-style: initial;
+  margin: auto;
+  width: fit-content;
 }
 .list li {
-  margin-left: 1em;
+  width: fit-content;
+  margin: auto;
 }
 
 a {
@@ -37,81 +47,302 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
 .section {
   width: 100%;
-  padding: 1em 0;
+  padding: 0.2em 0;
 }
 
 .container {
   width: 80%;
-  max-width: 1200px;
   margin: auto;
+  max-width: 580px;
 }
-
-.icon {
-  width: 2em;
+@media (min-width: 1100px) {
+  .container {
+    max-width: 1200px;
+  }
 }
-
-.icon + .icon {
-  margin-left: 1em;
+.container--nav {
+  width: 90%;
+  max-width: 1350px;
 }
 
 .nav {
   background: #ffe70f;
+  height: 8em;
+  padding: 0.5em 0;
 }
-.nav__box {
-  display: flex;
+.nav__row {
   justify-content: space-between;
-}
-.nav__list {
-  display: inline-flex;
-  min-width: 42%;
-  justify-content: space-around;
-}
-.nav__item {
-  font-family: "JI Burrito";
-  font-size: min(42px, 4vw);
-  color: #bc0000;
+  display: flex;
+  align-items: end;
+  position: relative;
+  height: 100%;
 }
 .nav__logo {
-  display: inline-block;
-  width: 128px;
-  position: relative;
+  height: 100%;
 }
-.nav__logo img {
-  position: absolute;
-  opacity: 0;
+.nav__button {
+  height: 50%;
+}
+@media (min-width: 800px) {
+  .nav__button {
+    display: none;
+  }
+}
+.nav__list {
+  font: 2.5rem "JI Burrito";
+}
+@media (max-width: 799px) {
+  .nav__list {
+    display: none;
+  }
+  .nav__list[data-visible] {
+    display: flex;
+    background: #bc0000;
+    color: white;
+    border: 1px solid #2f2f5e;
+    width: 100vw;
+    position: absolute;
+    translate: -5% 100%;
+    padding: 0.5em;
+    flex-wrap: wrap;
+  }
+  .nav__list[data-visible] li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__list[data-visible] li:hover {
+    background: #9d0000;
+  }
+}
+@media (min-width: 800px) {
+  .nav__list {
+    display: initial;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+  .nav__list li {
+    font-size: clamp(2.2rem, 3.8vmax, 3.5rem);
+    white-space: nowrap;
+    margin-left: 1em;
+  }
 }
 
 .footer {
+  padding: 1.5em 0;
+  background: url("../assets/patterns/pattern-dark.png") repeat 199px 359px, black;
+  color: white;
   text-align: center;
   font-size: 0.8rem;
 }
-.footer__nav, .footer__contacts {
-  padding: 1em;
+@media (min-width: 1100px) {
+  .footer__row {
+    width: 50%;
+    margin: auto;
+  }
 }
 .footer__nav {
   display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding: 0.5em;
+  margin: auto;
 }
-@media (min-width: 600px) {
-  .footer .footer__nav {
-    display: initial;
-    text-align: right;
+@media (min-width: 1100px) {
+  .footer__nav {
+    flex-direction: column;
+    text-align: end;
   }
-  .footer .footer__contacts {
-    text-align: left;
+}
+.footer__contacts {
+  padding: 0.5em;
+}
+@media (min-width: 1100px) {
+  .footer__contacts {
+    text-align: start;
   }
-  .footer .footer__socials {
-    justify-content: start;
+}
+.footer__socials {
+  padding: 0.5em;
+  width: fit-content;
+  margin: auto;
+}
+@media (min-width: 1100px) {
+  .footer__socials {
+    margin: 0;
   }
+}
+.footer__icon-link {
+  display: inline-block;
+  width: fit-content;
+}
+.footer__icon {
+  display: inline-block;
+  width: 2em;
+  margin: 0 0.5em;
+}
+.footer__legal {
+  padding: 0.5em;
+  display: flex;
+}
+.footer__terms {
+  width: 100%;
+  text-align: right;
+}
+.footer__privacy {
+  margin-left: 2em;
+  width: 100%;
+  text-align: left;
+}
+.footer__copyright {
+  font-size: 0.7rem;
+}
+
+.menu-nav {
+  background: #bc0000;
+  color: white;
+}
+.menu-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .menu-nav__list {
+    justify-content: space-between;
+  }
+}
+.menu-nav__item {
+  font-size: 1.2rem;
+  padding: 0.5em 0;
+  width: 25%;
+}
+@media (max-width: 499px) {
+  .menu-nav__item {
+    width: 50%;
+  }
+}
+@media (min-width: 500px) {
+  .menu-nav__item {
+    padding: 0.8em 0;
+    width: 20%;
+  }
+}
+@media (min-width: 800px) {
+  .menu-nav__item {
+    width: 10%;
+  }
+}
+.menu-nav__item:hover {
+  background: #930000;
+}
+
+.menu {
+  padding: 0;
+}
+.menu__group {
+  font-size: 1.6rem;
+}
+@media (min-width: 800px) {
+  .menu__group:nth-of-type(even) > .row {
+    flex-flow: row-reverse;
+  }
+}
+.menu__box {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__textbox {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1em;
+}
+.menu__header {
+  font: 3rem "Chivo";
+  text-transform: upper;
+}
+.menu__desc {
+  font-size: 0.5em;
+}
+.menu__photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__specials {
+  background: url("../assets/patterns/pattern-light.png") repeat 120px -354px, #ffe70f;
+  padding: 80px 0;
+}
+.menu__chicken {
+  background: url("../assets/patterns/pattern-light.png") repeat 292px -476px, #008dd9;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__platters {
+  background: url("../assets/patterns/pattern-light.png") repeat 256px -206px, #600071;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__burritos {
+  background: url("../assets/patterns/pattern-light.png") repeat 171px 207px, #126707;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__burgers {
+  background: url("../assets/patterns/pattern-light.png") repeat -111px -216px, #bc0000;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__breakfast {
+  background: url("../assets/patterns/pattern-light.png") repeat 121px 324px, #600071;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__kids {
+  background: url("../assets/patterns/pattern-light.png") repeat 398px -473px, #008dd9;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__kids img {
+  margin: 0.5em 0;
+}
+.menu__sides {
+  background: url("../assets/patterns/pattern-light.png") repeat -1px -486px, #ffe70f;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__drinks {
+  background: url("../assets/patterns/pattern-light.png") repeat -120px 188px, #bc0000;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__desserts {
+  background: url("../assets/patterns/pattern-light.png") repeat 75px 352px, #600071;
+  padding: 80px 0;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
 }
 
 .story {
@@ -122,36 +353,46 @@ p {
   font-size: 1.2rem;
   text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .story {
     font-size: 2rem;
     padding: 2.5em;
   }
 }
 
-.about--quality {
-  background: #351111;
-  color: white;
+.about {
+  padding: 2em;
 }
 .about--heritage {
-  background: #fffbb1;
+  background: url("../assets/patterns/pattern-light.png") repeat 469px 193px, #fffbb1;
+  color: black;
+}
+.about--quality {
+  background: url("../assets/patterns/pattern-light.png") repeat -6px 270px, #351111;
+  color: white;
 }
 .about--community {
-  background: #2f2f5e;
+  background: url("../assets/patterns/pattern-light.png") repeat 430px 33px, #2f2f5e;
   color: white;
 }
 .about__text {
+  font-size: 2rem;
   padding: 1em;
+  text-align: center;
 }
-
-@media (min-width: 600px) {
+.about__header {
+  font-family: "Chivo";
+}
+@media (min-width: 1100px) {
   .row {
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
-}
-.col {
-  width: 100%;
+
+  .col {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

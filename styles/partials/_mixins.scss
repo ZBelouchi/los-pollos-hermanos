@@ -1,0 +1,46 @@
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin adjacent-above {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+@mixin adjacent-below {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+@mixin adjacent-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+}
+@mixin adjacent-right {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+}
+
+@mixin background-pattern($color, $dark: false) {
+    background: if($dark, url('../assets/patterns/pattern-dark.png'), url('../assets/patterns/pattern-light.png')) repeat #{random(1000) - 500}px #{random(1000) - 500}px, $color;
+}
+@mixin jagged {
+    @each $pre in ("-webkit-mask", "mask") {
+        #{$pre}: 
+        conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/60px 51% repeat-x,
+        conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /60px 51%;
+    }
+    margin-top: -50px;
+}
+
+@mixin debug($color) {
+    border: 2px solid $color;
+}

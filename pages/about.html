@@ -11,29 +11,27 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="section nav">
-        <div class="container nav__box">
-            <ul class="nav__list">
-                <li class="nav__item nav__item--left"><a href="../pages/order.html" class="nav__link">Order</a></li>
-                <li class="nav__item nav__item--left"><a href="../pages/menu.html" class="nav__link">Menu</a></li>
-            </ul>
-            <div class="nav__logo">
-                <img src="../assets/logo1.png" alt="logo">
-            </div>
-            <ul class="nav__list">
-                <li class="nav__item nav__item--right"><a href="../pages/locations.html" class="nav__link">Locations</a></li>
-                <li class="nav__item nav__item--right"><a href="../pages/about.html" class="nav__link">About Us</a></li>
+    <header class="section nav">
+        <div class="container container--nav nav__row">
+            <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            <img src="../assets/icons/hamburger.png" alt="button" class="nav__button" onclick="dropDown()">
+            <ul class="nav__list" id="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="../pages/order.html" class="nav__link">Order</a></li>
+                <li class="nav__item"><a href="../pages/menu.html" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="../pages/about.html" class="nav__link">About us</a></li>
+                <li class="nav__item"><a href="../pages/locations.html" class="nav__link">Locations</a></li>
             </ul>
         </div>
-    </nav>
+    </header>
 
     <!-- About Us -->
 
     <!-- Story -->
     <div class="section story">
         <div class="container story__text">
-            <h1>Our Story</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus odit, quae sit tenetur culpa iusto incidunt voluptate ut porro laboriosam, labore ad corrupti nisi ratione quidem dolore voluptatem quasi itaque.</p>
+            <h2 class="about__header">Our Story</h2>
+            <p class="about__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus odit, quae sit tenetur culpa iusto incidunt voluptate ut porro laboriosam, labore ad corrupti nisi ratione quidem dolore voluptatem quasi itaque.</p>
         </div>
     </div>
     <!-- Heritage -->
@@ -43,8 +41,8 @@
                 <img src="../assets/original-pollos-hermanos.jpg" alt="original pollos hermanos photo">
             </div>
             <div class="about__text col">
-                <h2>Our Heritage</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
+                <h2 class="about__header">Our Heritage</h2>
+                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
             </div>
         </div>
     </section>
@@ -52,8 +50,8 @@
     <section class="section about about--quality">
         <div class="container row">
             <div class="about__text col">
-                <h2>Our Quality</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
+                <h2 class="about__header">Our Quality</h2>
+                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
             </div>
             <div class="about__img col">
                 <img src="../assets/ingredients.jpg" alt="restaurant photo">
@@ -67,8 +65,8 @@
                 <img src="../assets/gustavo-with-dea.PNG" alt="photo of owner with DEA">
             </div>
             <div class="about__text col">
-                <h2>Our Community</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
+                <h2 class="about__header">Our Community</h2>
+                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
             </div>
         </div>
     </section>
@@ -77,27 +75,28 @@
     <!-- Footer -->
     <footer class="section footer">
         <div class="container">
-        <div class="row">
-            <ul class="footer__nav col">
-                <li class="footer__item col"><a href="../pages/order.html" class="footer__link">Order</a></li>
-                <li class="footer__item col"><a href="../pages/menu.html" class="footer__link">Menu</a></li>
-                <li class="footer__item col"><a href="../pages/locations.html" class="footer__link">Locations</a></li>
-                <li class="footer__item col"><a href="../pages/about.html" class="footer__link">About Us</a></li>
-            </ul>
-            <div class="footer__contacts col">
-                <div class="footer__socials row">
-                    <span class="icon"><a href="https://www.facebook.com/eatlospolloshermanos" target="_blank"><img class="icon" src="../assets/facebook-icon.png" alt="facebook icon" class="footer__icon"></a></span>
-                    <span class="icon"><a href="https://www.instagram.com/eatlospolloshermanos/" target="_blank"><img class="icon" src="../assets/instagram-icon.png" alt="instagram icon" class="footer__icon"></a></span>
-                    <span class="icon"><a href="https://twitter.com/eatlospollos" target="_blank"><img class="icon" src="../assets/twitter-icon.png" alt="twitter icon" class="footer__icon"></a></span>
+            <div class="footer__row row">
+                <ul class="footer__nav col">
+                    <li class="footer__item col"><a href="../pages/order.html" class="footer__link">Order</a></li>
+                    <li class="footer__item col"><a href="../pages/menu.html" class="footer__link">Menu</a></li>
+                    <li class="footer__item col"><a href="../pages/locations.html" class="footer__link">Locations</a></li>
+                    <li class="footer__item col"><a href="../pages/about.html" class="footer__link">About Us</a></li>
+                </ul>
+                <div class="footer__contacts col">
+                    <div class="footer__socials">
+                        <a class="footer__icon-link" href="https://www.facebook.com/eatlospolloshermanos" target="_blank"><img class="footer__icon" src="../assets/icons/facebook-icon.png" alt="facebook icon"></a>
+                        <a class="footer__icon-link" href="https://www.instagram.com/eatlospolloshermanos/" target="_blank"><img class="footer__icon" src="../assets/icons/instagram-icon.png" alt="instagram icon"></a>
+                        <a class="footer__icon-link" href="https://twitter.com/eatlospollos" target="_blank"><img class="footer__icon" src="../assets/icons/twitter-icon.png" alt="twitter icon"></a>
+                    </div>
+                    <p class="footer__email">lospolloshermanos@madrigal.com</p>
+                    <p class="footer__phone">555-487-8280</p>
                 </div>
-                <p class="footer__email">lospolloshermanos@madrigal.com</p>
-                <p class="footer__phone">555-487-8280</p>
             </div>
-        </div>
-        <p class="footer__copyright">Copyright © 2022 Los Pollos Hermanos LLC.</p>
-        <div class="footer__legal row">
-            <a href="#" class="footer__terms">Terms and Conditions</a>
-            <a href="#" class="footer__privacy">Privacy Policy</a>
+            <div class="footer__legal">
+                <a href="#" class="footer__terms">Terms and Conditions</a>
+                <a href="#" class="footer__privacy">Privacy Policy</a>
+            </div>
+            <p class="footer__copyright">Copyright © 2022 Los Pollos Hermanos LLC.</p>
         </div>
     </footer>
 </body>

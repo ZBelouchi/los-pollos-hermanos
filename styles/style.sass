@@ -5,85 +5,200 @@
 
 *, *::before, *::after
     box-sizing: border-box
-body
     margin: 0
-    font-family: $normal
 
+body
+    font-family: $normal
 
 img
     max-width: 100%
 ul
     list-style: none
     padding: 0
-    margin: 0
 li
     height: fit-content
 .list
     list-style: initial
+    margin: auto
+    width: fit-content
     li
-        margin-left: 1em
+        width: fit-content
+        margin: auto
 a
     text-decoration: none
     color: inherit
-h1, h2, h3, h4, h5
-    // font-family: $bold-styled
-    // text-transform: uppercase
-    // font-size: 2em
-    margin: 0
-p
-    margin: 0
-
 
 .section
     width: 100%
-    padding: 1em 0
+    padding: 0.2em 0
 .container
     width: 80%
-    max-width: 1200px
     margin: auto
-.icon
-    width: 2em
-.icon + .icon
-    margin-left: 1em
+    max-width: 580px
+    @include lg
+        max-width: 1200px
+    &--nav
+        width: 90%
+        max-width: 1350px
 
 
 // Global
 .nav
     background: $yellow
-    &__box
-        display: flex
+    height: 8em
+    padding: 0.5em 0
+    &__row
         justify-content: space-between
-    &__list
-        display: inline-flex
-        min-width: 42%
-        justify-content: space-around
-    &__item
-        font-family: $bold-styled
-        font-size: min(42px, 4vw)
-        color: $red
-    &__logo
-        display: inline-block
-        width: 128px
+        display: flex
+        align-items: end
         position: relative
-    &__logo img
-        position: absolute
-        opacity: 0 // debug
+        height: 100%
+
+    &__logo
+        height: 100%
+    &__button
+        height: 50%
+        @include md
+            display: none
+    
+    &__list
+        font: 2.5rem $styled
+        @include nav
+            display: none
+            &[data-visible]
+                display: flex
+                background: $red
+                color: white
+                border: 1px solid $navy
+                width: 100vw
+                position: absolute
+                translate: -5% 100%
+                padding: 0.5em
+                
+                flex-wrap: wrap
+                li
+                    width: 100%
+                    text-align: center
+                    &:hover
+                        background: darken($red, 6)
+        @include md
+            display: initial
+            display: flex
+            width: 100%
+            justify-content: end
+            li
+                font-size: clamp(2.2rem, 3.8vmax, 3.5rem)
+                white-space: nowrap
+                margin-left: 1em
 .footer
+    padding: 1.5em 0
+    @include background-pattern(black, $dark: true)
+    color: white
     text-align: center
     font-size: 0.8rem
-    &__nav, &__contacts
-        padding: 1em
+    &__row
+        @include lg
+            width: 50%
+            margin: auto
     &__nav
         display: flex
-    @include md
-        .footer__nav
-            display: initial
-            text-align: right
-        .footer__contacts
-            text-align: left
-        .footer__socials
-            justify-content: start
+        justify-content: space-around
+        width: 60%
+        padding: 0.5em
+        margin: auto
+        @include lg
+            flex-direction: column
+            text-align: end
+    &__contacts
+        padding: 0.5em
+        @include lg
+            text-align: start
+    &__socials
+        padding: 0.5em
+        width: fit-content
+        margin: auto
+        @include lg
+            margin: 0
+    &__icon-link
+        display: inline-block
+        width: fit-content
+    &__icon
+        display: inline-block
+        width: 2em
+        margin: 0 0.5em
+    &__legal
+        padding: 0.5em
+        display: flex
+    &__terms
+        width: 100%
+        text-align: right
+    &__privacy
+        margin-left: 2em
+        width: 100%
+        text-align: left
+    &__copyright
+        font-size: 0.7rem
 
+// Menu
+.menu-nav
+    background: $red
+    color: white
+    &__list
+        display: flex
+        flex-wrap: wrap
+        text-align: center
+        justify-content: center
+        @include md
+            justify-content: space-between
+    &__item
+        font-size: 1.2rem
+        padding: 0.5em 0
+        width: 25%
+        @include xs
+            width: 50%
+        @include sm
+            padding: 0.8em 0
+            width: 20%
+        @include md
+            width: 10%
+        &:hover
+            background: darken($red, 8)
+.menu
+    padding: 0
+    &__group
+        font-size: 1.6rem
+        @include md
+            &:nth-of-type(even) > .row
+                flex-flow: row-reverse   
+    &__box
+        padding: 1em
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__textbox
+        text-align: center
+        background: rgba(255, 255, 255, 0.6)
+        padding: 1em
+    &__header
+        font: 3rem $header
+        text-transform: upper
+    &__desc
+        font-size: 0.5em
+    &__photo
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    @each $key in map-keys($menu-colors)
+        &__#{$key}
+            @include background-pattern(map-get($menu-colors, $key))
+            padding: 80px 0
+            
+            @if $key != "specials"
+                @include jagged
+            @if $key == "kids"
+                img
+                    margin: 0.5em 0
 
 // About Us
 .story
@@ -97,22 +212,26 @@ p
         font-size: 2rem
         padding: 2.5em
 .about
-    &--quality
-        background: #351111
-        color: white
-    &--heritage
-        background: #fffbb1
-    &--community
-        background: #2f2f5e
-        color: white
+    padding: 2em
+    @each $key in map-keys($about-colors)
+        &--#{$key}
+            @include background-pattern(nth(map-get($about-colors, $key), 1), $dark: false)
+            color: nth(map-get($about-colors, $key), 2)
     &__text
+        font-size: 2rem
         padding: 1em
+        text-align: center
+    &__header
+        font-family: $header
+    &__paragraph
+
+    &__img
 
 
-@include md
+@include lg
     .row
         display: flex
+        flex-direction: row
         justify-content: center
-@include lg
-.col
-    width: 100%
+    .col
+        width: 100%

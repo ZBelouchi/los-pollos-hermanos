@@ -1,0 +1,37 @@
+// colors
+$yellow: #ffe70f;
+$red: #bc0000;
+$green: #126707;
+$purple:#600071;
+$orange:#ff5500;
+$blue: #008dd9;
+$tan: #fffbb1;
+$aaron: #351111;    // named after a friend's jacket color, find serious name later
+$navy: #2f2f5e;
+
+// fonts
+@font-face {font-family: 'JI Burrito'; src: url('../assets/fonts/ji-burrito/ji-burrito.ttf');};
+$styled: 'JI Burrito';
+@font-face {font-family: 'Chivo'; src: url('../assets/fonts/chivo/Chivo-Bold.ttf');};
+$header: 'Chivo';
+@font-face {font-family: 'Arimo'; src: url('../assets/fonts/arimo/Arimo-VariableFont_wght.ttf');};
+$normal: 'Arimo';
+
+// maps
+$about-colors: (
+    heritage : ($tan, black),
+    quality : ($aaron, white),
+    community : ($navy, white),
+);
+$menu-colors: (
+    specials : $yellow,
+    chicken : $blue,
+    platters : $purple,
+    burritos : $green,
+    burgers : $red,
+    breakfast : $purple,
+    kids : $blue,
+    sides : $yellow,
+    drinks : $red,
+    desserts : $purple,
+);
