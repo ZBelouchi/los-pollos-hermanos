@@ -37,10 +37,18 @@ a
     max-width: 580px
     @include lg
         max-width: 1200px
-    &--nav
+    &--wide
         width: 90%
         max-width: 1350px
-
+.btn
+    background: $red
+    color: white
+    font: 3rem $header
+    border: 2px solid $navy
+    border-radius: 12px
+    padding: 0.2em 0.5em
+    width: fit-content
+    display: block
 
 // Global
 .nav
@@ -139,6 +147,94 @@ a
     &__copyright
         font-size: 0.7rem
 
+// Home
+.hero
+    font-size: 1.8rem
+    @include background-pattern($aaron)
+    color: white
+    .container
+        padding: 0.5em
+    &__text
+        text-align: center
+        padding: 1em
+        width: 100%
+    &__header
+        font: 1.5em $header
+        margin-bottom: 0.5em
+    &__img
+        width: fit-content
+        margin: auto
+        height: 100%
+        object-fit: cover
+            
+    &__subtitle
+        font-size: 1rem
+        color: $yellow
+        text-align: right
+.promo
+    @include background-pattern($blue)
+    font-size: 1.5rem
+    text-align: center
+    &__header
+        font: 2.5em $header
+        margin: 0.5em 0
+    &__item
+        width: 100%
+        max-width: 400px
+        margin: auto
+        @include lg
+            margin: initial
+    &__text
+        padding: 0.5em 0.8em
+    &__name
+        font-family: $header
+    &__btn
+        margin: 0.5em auto
+.social
+    &__icons
+        width: fit-content
+        margin: auto
+    &__icon
+        filter: invert(100%)
+        width: 8em
+        &--link
+            @include row-gap(2em)
+    &__photos
+        flex-wrap: wrap
+    &__photo
+        display: inline
+        aspect-ratio: 1/1
+        object-fit: cover
+        @include lg 
+            width: 50%
+        padding: 0.5em
+    &__header
+        font: 3em $header
+        margin: 0.8em 0
+        text-align: center
+.locations
+    @include background-pattern($navy)
+    font-size: 1.8rem
+    text-align: center
+    color: white
+    &__header
+        padding: 0.5em 1em
+        max-width: 800px
+        margin: auto
+        font-family: $header
+    &__row
+        flex-wrap: wrap
+        display: flex
+    &__group
+        width: 100%
+        padding: 0.5em
+        @include sm
+            width: 50%
+        @include lg
+            width: 25%
+    &__state
+    &__city
+
 // Menu
 .menu-nav
     background: $red
@@ -177,7 +273,7 @@ a
         justify-content: center
     &__textbox
         text-align: center
-        background: rgba(255, 255, 255, 0.6)
+        background: #ffffff99
         padding: 1em
     &__header
         font: 3rem $header
@@ -234,4 +330,10 @@ a
         flex-direction: row
         justify-content: center
     .col
+        width: 100%
+
+    .grid
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    .cell
         width: 100%
