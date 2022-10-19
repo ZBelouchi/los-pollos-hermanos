@@ -24,52 +24,65 @@
         </div>
     </header>
 
-    <!-- About Us -->
+    <!-- Careers -->
+    <section class="section career career--top">
+        <div class="career__text container">
+            <h1 class="career__header">Join the Los Pollos Hermanos family!</h1>
+            <p>We take pride in everything we do, and in order to do that we expect all team members to meet our service expectations. Every day our staff serves our customers exceptional food with impecible service, that is the Los Pollos Way.</p>
+        </div>
+    </section>
+    <section class="section career career--bottom">
+        <div class="container">
+            <div class="row">
+                <div class="career__text col">
+                    <h2>Employees must have excellent:</h2>
+                    <ul class="career__list list">
+                        <li class="career__item">Communication</li>
+                        <li class="career__item">Cleanliness</li>
+                        <li class="career__item">Attention to Detail</li>
+                        <li class="career__item">Customer Service</li>
+                        <li class="career__item">Work Ethic</li>
+                    </ul>
+                    <p>If you possess these qualities, then please apply. Our doors are always open.</p>
+                </div>
 
-    <!-- Story -->
-    <div class="section story">
-        <div class="container story__text">
-            <h2 class="about__header">Our Story</h2>
-            <p class="about__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus odit, quae sit tenetur culpa iusto incidunt voluptate ut porro laboriosam, labore ad corrupti nisi ratione quidem dolore voluptatem quasi itaque.</p>
-        </div>
-    </div>
-    <!-- Heritage -->
-    <section class="section about about--heritage">
-        <div class="container row">
-            <div class="about__img col">
-                <img src="../assets/original-pollos-hermanos.jpg" alt="original pollos hermanos photo">
+                <div class="career__img">
+                    <img src="../assets/employee.jpg" alt="employee photo">
+                </div>
             </div>
-            <div class="about__text col">
-                <h2 class="about__header">Our Heritage</h2>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
-            </div>
+            <button class="btn career__btn" onclick="document.getElementById('applyModal').showModal()">Apply Now!</button>
         </div>
     </section>
-    <!-- Quality -->
-    <section class="section about about--quality">
-        <div class="container row">
-            <div class="about__text col">
-                <h2 class="about__header">Our Quality</h2>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
+
+    <dialog class="apply" id="applyModal">
+        <!-- <button class="close apply__close" onclick="document.getElementById('applyModal').close()">X</button> -->
+        <img src="../assets//icons/close.png" alt="close button" class="close apply__close" onclick="closeApply()">
+        <form action="/contact" method="POST" id="applyForm">
+            <div class="row">
+                <div class="apply__box">
+                    <label class="apply__label" for="apply-fname">First Name:</label>
+                    <input type="text" value="" name="fname" id="apply-fname" class="apply__field" required>
+                </div>
+                <div class="apply__box">
+                    <label class="apply__label" for="apply-lname">Last Name:</label>
+                    <input type="text" value="" name="lname" id="apply-lname" class="apply__field" required>
+                </div>
             </div>
-            <div class="about__img col">
-                <img src="../assets/ingredients.jpg" alt="restaurant photo">
+            <div class="apply__box">
+                <label class="apply__label" for="apply-email">Email:</label>
+                <input type="email" value="" name="email" id="apply-email" class="apply__field" required>
             </div>
-        </div>
-    </section>
-    <!-- Community -->
-    <section class="section about about--community">
-        <div class="container row">
-            <div class="about__img col">
-                <img src="../assets/gustavo-with-dea.PNG" alt="photo of owner with DEA">
+            <div class="apply__box">
+                <label class="apply__label" for="apply-phone">Phone:</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="" name="phone" id="apply-phone" class="apply__field" required>
             </div>
-            <div class="about__text col">
-                <h2 class="about__header">Our Community</h2>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, pariatur. Qui atque eos architecto. Eius vel, architecto eligendi nam quas debitis illo rem porro magnam nobis fugit et natus veritatis!</p>
+            <div class="apply__box">
+                <label for="apply-resume" class="apply__label">Attach Resume:</label>
+                <input type="file" name="resume" id="apply-resume" class="apply__field" required>
             </div>
-        </div>
-    </section>
-    
+            <input type="submit" class="apply__submit">
+        </form>
+    </dialog>
 
     <!-- Footer -->
     <footer class="section footer">

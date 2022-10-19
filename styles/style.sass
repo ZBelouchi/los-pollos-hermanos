@@ -24,6 +24,7 @@ li
     li
         width: fit-content
         margin: auto
+        font-size: 0.8em       
 a
     text-decoration: none
     color: inherit
@@ -43,7 +44,7 @@ a
 .btn
     background: $red
     color: white
-    font: 3rem $header
+    font: 2.6rem $header
     border: 2px solid $navy
     border-radius: 12px
     padding: 0.2em 0.5em
@@ -322,6 +323,60 @@ a
     &__paragraph
 
     &__img
+
+// Careers
+.career
+    text-align: center
+    font-size: 1.5rem
+    padding: 1em
+    &--top
+        @include background-pattern($red)
+        color: white
+        .container
+            max-width: 576px
+    &--bottom
+
+
+    .container
+        // @include debug(magenta)
+        
+    &__header
+        // @include debug(black)
+        font: 2em $header
+    &__text
+        // @include debug(red)
+        padding: 1em
+    &__list
+        // @include debug(green)
+    &__item
+        // @include debug(blue)
+    &__img
+        // @include debug(orange)
+    &__btn
+        margin: auto
+.apply
+    @include center($position: fixed)
+    padding: 2.5em
+    &__close
+        width: 6%
+        position: absolute
+        top: 2%
+        right: 2%
+    &__box
+        padding: 0.2em
+        display: flex
+        flex-direction: column
+    &__label
+        font: 1.2rem $header  
+    &__field
+        font-size: 1.2rem
+    &__submit
+        font: 2rem $header
+        color: white
+        background: $red
+        width: fit-content
+        margin: 0.5em auto
+        display: block 
 
 
 @include lg
