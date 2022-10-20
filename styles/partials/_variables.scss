@@ -1,13 +1,13 @@
 // colors
-$yellow: #ffe70f;
-$red: #bc0000;
-$green: #126707;
-$purple:#600071;
-$orange:#ff5500;
 $blue: #008dd9;
-$tan: #fffbb1;
-$aaron: #351111;    // named after a friend's jacket color, find serious name later
+$green: #126707;
 $navy: #2f2f5e;
+$orange:#ff5500;
+$purple:#600071;
+$red: #bc0000;
+$rosewood: #351111;
+$tan: #fffbb1;
+$yellow: #ffe70f;
 
 // fonts
 @font-face {font-family: 'JI Burrito'; src: url('../assets/fonts/ji-burrito/ji-burrito.ttf');};
@@ -20,7 +20,7 @@ $normal: 'Arimo';
 // maps
 $about-colors: (
     heritage : ($tan, black),
-    quality : ($aaron, white),
+    quality : ($rosewood, white),
     community : ($navy, white),
 );
 $menu-colors: (

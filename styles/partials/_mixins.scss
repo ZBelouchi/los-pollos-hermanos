@@ -2,7 +2,7 @@
     position: #{$position};
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    translate: -50%, -50%;
 }
 
 @mixin background-pattern($color, $dark: false) {
@@ -21,9 +21,4 @@
     & + & {
         margin-#{$direction}: $gap;
     }
-}
-
-
-@mixin debug($color) {
-    border: 2px solid $color;
 }
