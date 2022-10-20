@@ -1,0 +1,38 @@
+// colors
+$blue: #008dd9;
+$green: #126707;
+$navy: #2f2f5e;
+$orange:#ff5500;
+$purple:#600071;
+$red: #bc0000;
+$rosewood: #351111;
+$tan: #fffbb1;
+$yellow: #ffe70f;
+$alpha-white: #ffffff8c;
+
+// fonts
+@font-face {font-family: 'JI Burrito'; src: url('../assets/fonts/ji-burrito/ji-burrito.ttf');};
+$styled: 'JI Burrito';
+@font-face {font-family: 'Chivo'; src: url('../assets/fonts/chivo/Chivo-Bold.ttf');};
+$header: 'Chivo';
+@font-face {font-family: 'Arimo'; src: url('../assets/fonts/arimo/Arimo-VariableFont_wght.ttf');};
+$normal: 'Arimo';
+
+// maps
+$about-colors: (
+    heritage : ($tan, black),
+    quality : ($rosewood, white),
+    community : ($navy, white),
+);
+$menu-colors: (
+    specials : $yellow,
+    chicken : $blue,
+    platters : $purple,
+    burritos : $green,
+    burgers : $red,
+    breakfast : $purple,
+    kids : $blue,
+    sides : $yellow,
+    drinks : $red,
+    desserts : $purple,
+);

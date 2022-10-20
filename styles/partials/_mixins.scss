@@ -1,0 +1,31 @@
+@mixin center($position: absolute) {
+    position: #{$position};
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@mixin background-pattern($color, $dark: false) {
+    background: if($dark, url('../assets/patterns/pattern-dark.png'), url('../assets/patterns/pattern-light.png')) repeat #{random(1000) - 500}px #{random(1000) - 500}px, $color;
+}
+@mixin jagged {
+    @each $pre in ("-webkit-mask", "mask") {
+        #{$pre}: 
+        conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/60px 51% repeat-x,
+        conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /60px 51%;
+    }
+    margin-top: -50px;
+}
+
+@mixin row-gap($gap, $direction: "left") {
+    & + & {
+        margin-#{$direction}: $gap;
+    }
+}
+
+@mixin header($size: inherit, $font: $header, $margin: 0, $centered: true, $uppercase: false) {
+    font: $size $header;
+    margin: $margin;
+    text-align: if($centered, center, inherit);
+    text-transform: if($uppercase, uppercase, none);
+}

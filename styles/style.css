@@ -1,0 +1,559 @@
+@font-face {
+  font-family: "JI Burrito";
+  src: url("../assets/fonts/ji-burrito/ji-burrito.ttf");
+}
+@font-face {
+  font-family: "Chivo";
+  src: url("../assets/fonts/chivo/Chivo-Bold.ttf");
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("../assets/fonts/arimo/Arimo-VariableFont_wght.ttf");
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font: 22px "Arimo";
+}
+@media (min-width: 1100px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  height: fit-content;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Chivo";
+  margin: 0.4em 0;
+  text-align: center;
+}
+
+.section {
+  padding: 1em 0;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 580px;
+  margin: auto;
+}
+@media (min-width: 1100px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.container--wide {
+  width: 90%;
+  max-width: 1350px;
+}
+
+.btn {
+  font: 2rem "Chivo";
+  display: block;
+  width: fit-content;
+  padding: 0.2em 0.5em;
+  border: 2px solid black;
+  border-radius: 12px;
+  background: #bc0000;
+  color: white;
+}
+
+.list {
+  width: fit-content;
+  margin: auto;
+  list-style: initial;
+}
+
+.nav {
+  height: 8em;
+  padding: 0.5em 0;
+  background: #ffe70f;
+}
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+  height: 100%;
+}
+.nav__logo {
+  height: 100%;
+}
+.nav__button {
+  height: 50%;
+}
+@media (min-width: 800px) {
+  .nav__button {
+    display: none;
+  }
+}
+.nav__list {
+  font: 2rem "JI Burrito";
+}
+@media (max-width: 799px) {
+  .nav__list {
+    display: none;
+  }
+  .nav__list[data-visible] {
+    position: absolute;
+    translate: -5% 103%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    border: 1px solid #2f2f5e;
+    padding: 0.5em;
+    background: #bc0000;
+    color: white;
+  }
+  .nav__list[data-visible] li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__list[data-visible] li:hover {
+    background: #9d0000;
+  }
+}
+@media (min-width: 800px) {
+  .nav__list {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  .nav__list li {
+    margin-left: 1em;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1100px) {
+  .nav__list {
+    font: 2.5rem "JI Burrito";
+  }
+}
+
+.footer {
+  font-size: 0.6rem;
+  padding: 1.5em 0;
+  background: url("../assets/patterns/pattern-dark.png") repeat 348px 122px, black;
+  color: white;
+  text-align: center;
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding: 0.5em;
+  margin: auto;
+}
+.footer__contacts {
+  padding: 0.5em;
+}
+.footer__socials {
+  width: fit-content;
+  padding: 0.5em;
+  margin: auto;
+}
+.footer__icon-link {
+  display: inline-block;
+  width: fit-content;
+}
+.footer__icon {
+  display: inline-block;
+  width: 2em;
+  margin: 0 0.5em;
+}
+.footer__legal {
+  display: flex;
+  padding: 0.5em;
+}
+.footer__terms {
+  width: 100%;
+  text-align: right;
+}
+.footer__privacy {
+  width: 100%;
+  margin-left: 2em;
+  text-align: left;
+}
+.footer__copyright {
+  font-size: 0.7rem;
+}
+@media (min-width: 1100px) {
+  .footer__row {
+    width: 50%;
+    margin: auto;
+  }
+  .footer__nav {
+    flex-direction: column;
+    text-align: end;
+  }
+  .footer__contacts {
+    text-align: start;
+  }
+  .footer__socials {
+    margin: 0;
+  }
+}
+
+.hero {
+  background: url("../assets/patterns/pattern-light.png") repeat -277px 184px, #351111;
+  color: white;
+}
+.hero .container {
+  padding: 0.5em;
+}
+.hero__text {
+  width: 100%;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+.hero__img {
+  width: fit-content;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+.hero__subtitle {
+  font-size: 0.8rem;
+  color: #ffe70f;
+  text-align: right;
+}
+
+.promo {
+  background: url("../assets/patterns/pattern-light.png") repeat -401px -21px, #fffbb1;
+}
+.promo__item {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+@media (min-width: 1100px) {
+  .promo__item {
+    margin: initial;
+  }
+}
+.promo__text {
+  padding: 0.5em 0.8em;
+}
+.promo__btn {
+  margin: 0.5em auto;
+}
+
+.social__icons {
+  width: fit-content;
+  margin: auto;
+}
+.social__icon {
+  width: 2em;
+  filter: invert(100%);
+}
+.social__icon--link + .social__icon--link {
+  margin-left: 1em;
+}
+.social__photos {
+  flex-wrap: wrap;
+}
+.social__photo {
+  display: inline;
+  aspect-ratio: 1/1;
+  padding: 0.5em;
+  object-fit: cover;
+}
+@media (min-width: 1100px) {
+  .social__photo {
+    width: 50%;
+  }
+}
+
+.locations {
+  background: url("../assets/patterns/pattern-light.png") repeat -147px -148px, #2f2f5e;
+  color: white;
+  text-align: center;
+}
+.locations__header {
+  max-width: 600px;
+  margin: auto;
+}
+.locations__row {
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.locations__group {
+  width: 100%;
+  padding: 0.5em;
+}
+@media (min-width: 500px) {
+  .locations__group {
+    width: 50%;
+  }
+}
+@media (min-width: 1100px) {
+  .locations__group {
+    width: 25%;
+  }
+}
+
+.job__btn {
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.menu-nav {
+  background: #bc0000;
+  color: white;
+}
+.menu-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .menu-nav__list {
+    justify-content: space-between;
+  }
+}
+.menu-nav__item {
+  font-size: 0.8rem;
+  width: 25%;
+  padding: 0.5em 0;
+  text-align: center;
+}
+.menu-nav__item:hover {
+  background: #930000;
+}
+@media (max-width: 499px) {
+  .menu-nav__item {
+    width: 50%;
+  }
+}
+@media (min-width: 500px) {
+  .menu-nav__item {
+    width: 20%;
+  }
+}
+
+.menu {
+  padding: 0;
+}
+@media (min-width: 800px) {
+  .menu__group:nth-of-type(even) > .row {
+    flex-flow: row-reverse;
+  }
+}
+.menu__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+}
+.menu__textbox {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.5490196078);
+  text-align: center;
+}
+.menu__name {
+  font-weight: bold;
+}
+.menu__desc {
+  font-size: 0.8rem;
+}
+.menu__photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__photo-img {
+  border-radius: 12px;
+}
+.menu__kids img {
+  margin: 0.5em 0;
+}
+.menu__specials {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat -139px 169px, #ffe70f;
+}
+.menu__chicken {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat -17px 0px, #008dd9;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__platters {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat -154px -374px, #600071;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__burritos {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat -202px -102px, #126707;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__burgers {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat -111px -136px, #bc0000;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__breakfast {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat 258px -144px, #600071;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__kids {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat 262px -244px, #008dd9;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__sides {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat 388px 450px, #ffe70f;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__drinks {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat 254px 313px, #bc0000;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+.menu__desserts {
+  padding: 80px 0;
+  background: url("../assets/patterns/pattern-light.png") repeat -305px -316px, #600071;
+  -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
+  margin-top: -50px;
+}
+
+.story {
+  padding: 2em;
+  background-image: url("../assets/spices.jpg");
+  background-position: center;
+  color: black;
+  text-align: center;
+}
+.story__text {
+  padding: 0.5em;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5490196078);
+}
+@media (min-width: 800px) {
+  .story__text {
+    max-width: 800px;
+  }
+}
+@media (min-width: 800px) {
+  .story {
+    font-size: 1.4rem;
+  }
+}
+
+.about__text {
+  padding: 1em;
+  text-align: center;
+}
+.about:nth-child(odd) .container {
+  flex-direction: row-reverse;
+}
+.about--heritage {
+  background: url("../assets/patterns/pattern-light.png") repeat 85px 348px, #fffbb1;
+  color: black;
+}
+.about--quality {
+  background: url("../assets/patterns/pattern-light.png") repeat -24px -189px, #351111;
+  color: white;
+}
+.about--community {
+  background: url("../assets/patterns/pattern-light.png") repeat -179px 197px, #2f2f5e;
+  color: white;
+}
+
+.career--top {
+  text-align: center;
+  background: url("../assets/patterns/pattern-light.png") repeat -156px 34px, #bc0000;
+  color: white;
+}
+.career--top .container {
+  max-width: 600px;
+}
+.career__text {
+  padding: 1em;
+}
+.career__btn {
+  margin: 0.5em auto;
+}
+
+.apply {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 2em;
+}
+.apply__close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 6%;
+}
+.apply__box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4em;
+}
+.apply__submit {
+  font-size: 1rem;
+  margin: 0.5em auto;
+}
+
+@media (min-width: 1100px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

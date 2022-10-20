@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pollos Hermanos</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./scripts/script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="section nav">
+        <div class="container container--wide nav__row">
+            <img src="./assets/logo1.png" alt="logo" class="nav__logo">
+            <img src="./assets/icons/hamburger.png" alt="button" class="nav__button" onclick="dropDown()">
+            <ul class="nav__list" id="nav__list">
+                <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="./pages/menu.html" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="./pages/about.html" class="nav__link">About us</a></li>
+                <li class="nav__item"><a href="../pages/careers.html" class="nav__link">Careers</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <!-- Hero -->
+    <section class="section hero">
+        <div class="container row">
+            <div class="hero__text">
+                <h1 class="hero__header">Welcome to Los Pollos Hermanos</h1>
+                <p>Where the finest ingredients are brought together with love and care, then slow cooked to perfection. Yes the old ways are still best at Los Pollos Hermanos. Where something good is always cooking.</p>
+            </div>
+            <div class="hero__img">
+                <img src="./assets/gus.png" alt="gustavo fring">
+                <p class="hero__subtitle">Owner, and Co-Founder, Gus Fring</p>
+            </div>
+        </div>
+    </section>
+    <!-- Promo -->
+    <section class="section promo">
+        <div class="container">
+            <h2 class="promo__header">One taste, and you'll know!</h2>
+            <div class="row">
+                <div class="promo__item">
+                    <img src="./assets/pollos-tenders-menu.png" alt="chicken tenders" class="promo__img">
+                    <div class="promo__text">
+                        <h3 class="promo__name">Pollos Tenders</h3>
+                        <p class="promo__desc">Chicken strips seasoned to perfection with a recipe passed through generations.</p>
+                    </div>
+                </div>
+                <div class="promo__item">
+                    <img src="./assets/abq-sandwich-menu.png" alt="chicken sandwich" class="promo__img">
+                    <div class="promo__text">
+                        <h3 class="promo__name">ABQ Chicken Sandwich</h3>
+                        <p class="promo__desc">An Albuquerque classic! Richly flavored chicken sandwich topped with coleslaw and our signature sauce.</p>
+                    </div>
+                </div>
+                <div class="promo__item">
+                    <img src="./assets/Fring-Fries-menu.png" alt="curly fries" class="promo__img">
+                    <div class="promo__text">
+                        <h3 class="promo__name">Spice Curls</h3>
+                        <p class="promo__desc">Try our new Spice Curls! Curly Fries spiced perfectly, with a new taste that still honours our traditions, and our New Mexican palate.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="./pages/menu.html" class="btn promo__btn">Taste the rest!</a>
+        </div>
+    </section>
+    <!-- Social -->
+    <section class="section social">
+        <div class="container">
+            <h2 class="social__header">Join the Family!</h2>
+            <div class="social__icons">
+                <a class="social__icon--link" href="https://www.facebook.com/eatlospolloshermanos" target="_blank"><img class="social__icon" src="../assets/icons/facebook-icon.png" alt="facebook icon"></a>
+                <a class="social__icon--link" href="https://www.instagram.com/eatlospolloshermanos/" target="_blank"><img class="social__icon" src="../assets/icons/instagram-icon.png" alt="instagram icon"></a>
+                <a class="social__icon--link" href="https://twitter.com/eatlospollos" target="_blank"><img class="social__icon" src="../assets/icons/twitter-icon.png" alt="twitter icon"></a>
+            </div>
+            <h3 class="social__header">Get Featured</h3>
+            <div class="social__photos row">
+                <img src="./assets/customers/photo1.jpg" alt="customer photo" class="social__photo">
+                <img src="./assets/customers/photo2.jpg" alt="customer photo" class="social__photo">
+            </div>
+            <h3 class="social__header">Share the perfection</h3>
+            <div class="social__photos row">
+                <img src="./assets/customers/photo3.jpg" alt="customer photo" class="social__photo">
+                <img src="./assets/customers/photo4.jpg" alt="customer photo" class="social__photo">
+                <img src="./assets/customers/photo5.jpg" alt="customer photo" class="social__photo">
+            </div>
+        </div>
+    </section>
+    <!-- Locations -->
+    <section class="section locations">
+        <div class="container container--wide">
+            <h2 class="locations__header">Find us at any of our 14 locations across the US</h2>
+            <div class="locations__row">
+                <div class="locations__group">
+                    <h3 class="locations__state">New Mexico</h3>
+                    <p class="locations__city">Albuquerque</p>
+                    <p class="locations__city">Alamogordo</p>
+                    <p class="locations__city">Carlsbad</p>
+                    <p class="locations__city">Las Cruces</p>
+                    <p class="locations__city">Farmington</p>
+                </div>
+                <div class="locations__group">
+                    <h3 class="locations__state">Texas</h3>
+                    <p class="locations__city">Brownfield</p>
+                    <p class="locations__city">Lubbock</p>
+                    <p class="locations__city">Abilene</p>
+                    <p class="locations__city">Amarillo</p>
+                    <p class="locations__city">Odessa</p>
+                </div>
+                <div class="locations__group">
+                    <h3 class="locations__state">Arizona</h3>
+                    <p class="locations__city">Flagstaff</p>
+                    <p class="locations__city">Phoenix</p>
+                    <p class="locations__city">Tucson</p>
+                </div>
+                <div class="locations__group">
+                    <h3 class="locations__state">Others</h3>
+                    <p class="locations__city">Colorado Springs, CO</p>
+                    <p class="locations__city">St. George, UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Job -->
+    <section class="section job">
+        <div class="container">
+            <h2>Looking for rewarding part-time or full-time work?</h2>
+            <a href="./pages/careers.html" class="btn job__btn">Join the Family</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="container">
+            <div class="footer__row row">
+                <ul class="footer__nav col">
+                    <li class="footer__item col"><a href="../pages/home.html" class="footer__link">Home</a></li>
+                    <li class="footer__item col"><a href="../pages/menu.html" class="footer__link">Menu</a></li>
+                    <li class="footer__item col"><a href="../pages/about.html" class="footer__link">About Us</a></li>
+                    <li class="footer__item col"><a href="../pages/careers.html" class="footer__link">Careers</a></li>
+                </ul>
+                <div class="footer__contacts col">
+                    <div class="footer__socials">
+                        <a class="footer__icon-link" href="https://www.facebook.com/eatlospolloshermanos" target="_blank"><img class="footer__icon" src="../assets/icons/facebook-icon.png" alt="facebook icon"></a>
+                        <a class="footer__icon-link" href="https://www.instagram.com/eatlospolloshermanos/" target="_blank"><img class="footer__icon" src="../assets/icons/instagram-icon.png" alt="instagram icon"></a>
+                        <a class="footer__icon-link" href="https://twitter.com/eatlospollos" target="_blank"><img class="footer__icon" src="../assets/icons/twitter-icon.png" alt="twitter icon"></a>
+                    </div>
+                    <p class="footer__email">lospolloshermanos@madrigal.com</p>
+                    <p class="footer__phone">555-487-8280</p>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <a href="#" class="footer__terms">Terms and Conditions</a>
+                <a href="#" class="footer__privacy">Privacy Policy</a>
+            </div>
+            <p class="footer__copyright">Copyright © 2022 Los Pollos Hermanos LLC.</p>
+        </div>
+    </footer>
+</body>
+</html>

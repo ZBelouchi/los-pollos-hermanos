@@ -1,0 +1,344 @@
+@use './partials/variables' as *
+@use './partials/mixins' as *
+@use './partials/breakpoints' as *
+
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+
+html
+    font: 22px $normal
+    @include lg
+        font-size: 24px
+img
+    max-width: 100%
+ul
+    padding: 0
+    list-style: none
+li
+    height: fit-content
+a
+    color: inherit
+    text-decoration: none
+h1, h2, h3
+    font-family: $header
+    margin: 0.4em 0
+    text-align: center
+
+.section
+    padding: 1em 0
+    width: 100%
+.container
+    width: 80%
+    max-width: 580px
+    margin: auto
+    @include lg
+        max-width: 1200px
+    &--wide
+        width: 90%
+        max-width: 1350px
+.btn
+    font: 2rem $header
+    display: block
+    width: fit-content
+    padding: 0.2em 0.5em
+    border: 2px solid black
+    border-radius: 12px
+    background: $red
+    color: white
+.list
+    width: fit-content
+    margin: auto
+    list-style: initial
+
+
+
+// Global
+.nav
+    height: 8em
+    padding: 0.5em 0
+    background: $yellow
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: end
+        position: relative
+        height: 100%
+    &__logo
+        height: 100%
+    &__button
+        height: 50%
+        @include md
+            display: none
+    &__list
+        font: 2rem $styled
+        @include nav
+            display: none
+            &[data-visible]
+                position: absolute
+                translate: -5% 103%
+                display: flex
+                flex-wrap: wrap
+                width: 100vw
+                border: 1px solid $navy
+                padding: 0.5em
+                background: $red
+                color: white
+                li
+                    width: 100%
+                    text-align: center
+                    &:hover
+                        background: darken($red, 6)
+        @include md
+            display: flex
+            justify-content: end
+            width: 100%
+            li
+                margin-left: 1em
+                white-space: nowrap
+        @include lg
+            font: 2.5rem $styled
+.footer
+    font-size: 0.6rem
+    padding: 1.5em 0
+    @include background-pattern(black, $dark: true)
+    color: white
+    text-align: center
+    &__nav
+        display: flex
+        justify-content: space-around
+        width: 60%
+        padding: 0.5em
+        margin: auto
+    &__contacts
+        padding: 0.5em
+    &__socials
+        width: fit-content
+        padding: 0.5em
+        margin: auto
+    &__icon-link
+        display: inline-block
+        width: fit-content
+    &__icon
+        display: inline-block
+        width: 2em
+        margin: 0 0.5em
+    &__legal
+        display: flex
+        padding: 0.5em
+    &__terms
+        width: 100%
+        text-align: right
+    &__privacy
+        width: 100%
+        margin-left: 2em
+        text-align: left
+    &__copyright
+        font-size: 0.7rem
+    @include lg
+        &__row
+            width: 50%
+            margin: auto
+        &__nav
+            flex-direction: column
+            text-align: end
+        &__contacts
+            text-align: start
+        &__socials
+            margin: 0
+
+// Home
+.hero
+    @include background-pattern($rosewood)
+    color: white
+    .container
+        padding: 0.5em
+    &__text
+        width: 100%
+        padding: 0.5em 1em
+        text-align: center
+    &__img
+        width: fit-content
+        height: 100%
+        margin: auto
+        object-fit: cover
+    &__subtitle
+        font-size: 0.8rem
+        color: $yellow
+        text-align: right
+.promo
+    @include background-pattern($tan)
+    &__item
+        text-align: center
+        width: 100%
+        max-width: 400px
+        margin: auto
+        @include lg
+            margin: initial
+    &__text
+        padding: 0.5em 0.8em
+    &__btn
+        margin: 0.5em auto
+.social
+    &__icons
+        width: fit-content
+        margin: auto
+    &__icon
+        width: 2em
+        filter: invert(100%)
+        &--link
+            @include row-gap(1em)
+    &__photos
+        flex-wrap: wrap
+    &__photo
+        display: inline
+        aspect-ratio: 1/1
+        padding: 0.5em
+        object-fit: cover
+        @include lg
+            width: 50%
+.locations
+    @include background-pattern($navy)
+    color: white
+    text-align: center
+    &__header
+        max-width: 600px
+        margin: auto
+    &__row
+        font-size: 0.8rem
+        display: flex
+        flex-wrap: wrap
+    &__group
+        width: 100%
+        padding: 0.5em
+        @include sm
+            width: 50%
+        @include lg
+            width: 25%
+.job
+    &__btn
+        font-size: 1.5rem
+        margin: auto
+
+// Menu
+.menu-nav
+    background: $red
+    color: white
+    &__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        @include md
+            justify-content: space-between
+    &__item
+        font-size: 0.8rem
+        width: 25%
+        padding: 0.5em 0
+        text-align: center
+        &:hover
+            background: darken($red, 8)
+        @include xs
+            width: 50%
+        @include sm
+            width: 20%
+.menu
+    padding: 0
+    &__group
+        &:nth-of-type(even) > .row
+            @include md
+                flex-flow: row-reverse   
+    &__box
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 1em
+    &__textbox
+        padding: 1em
+        background: $alpha-white
+        text-align: center
+    &__name
+        font-weight: bold
+    &__desc
+        font-size: 0.8rem
+    &__photo
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &-img
+            border-radius: 12px
+    &__kids
+        img
+            margin: 0.5em 0
+    @each $key in map-keys($menu-colors)
+        &__#{$key}
+            padding: 80px 0
+            @include background-pattern(map-get($menu-colors, $key))
+            @if $key != "specials"
+                @include jagged
+
+// About Us
+.story
+    padding: 2em
+    background-image: url('../assets/spices.jpg')
+    background-position: center
+    color: black
+    text-align: center
+    &__text
+        padding: 0.5em
+        border-radius: 8px
+        background: $alpha-white
+        @include md
+            max-width: 800px
+    @include md
+        font-size: 1.4rem
+.about
+    &__text
+        padding: 1em
+        text-align: center
+    &__img
+    &:nth-child(odd)
+        .container
+            flex-direction: row-reverse
+    @each $key in map-keys($about-colors)
+        &--#{$key}
+            @include background-pattern(nth(map-get($about-colors, $key), 1), $dark: false)
+            color: nth(map-get($about-colors, $key), 2)
+
+// Careers
+.career
+    &--top
+        text-align: center
+        @include background-pattern($red)
+        color: white
+        .container
+            max-width: 600px
+    &__text
+        padding: 1em
+    &__btn
+        margin: 0.5em auto
+.apply
+    @include center($position: fixed)
+    padding: 2em
+    &__close
+        position: absolute
+        top: 2%
+        right: 2%
+        width: 6%
+    &__box
+        display: flex
+        flex-direction: column
+        padding: 0.4em
+    &__submit
+        font-size: 1rem
+        margin: 0.5em auto
+
+@include lg
+    .row
+        display: flex
+        flex-direction: row
+        justify-content: center
+    .col
+        width: 100%
+    .grid
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))

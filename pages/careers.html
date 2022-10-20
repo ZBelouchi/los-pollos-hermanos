@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pollos Hermanos</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <script defer src="../scripts/script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="section nav">
+        <div class="container container--wide nav__row">
+            <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            <img src="../assets/icons/hamburger.png" alt="button" class="nav__button" onclick="dropDown()">
+            <ul class="nav__list" id="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="../pages/menu.html" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="../pages/about.html" class="nav__link">About us</a></li>
+                <li class="nav__item"><a href="../pages/careers.html" class="nav__link">Careers</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Careers -->
+    <section class="section career career--top">
+        <div class="career__text container">
+            <h1 class="career__header">Join the Los Pollos Hermanos family!</h1>
+            <p>We take pride in everything we do, and in order to do that we expect all team members to meet our service expectations. Every day our staff serves our customers exceptional food with impeccable service, that is the Los Pollos Way.</p>
+        </div>
+    </section>
+    <section class="section career career--bottom">
+        <div class="container">
+            <div class="row">
+                <div class="career__text col">
+                    <h2>Employees must have excellent:</h2>
+                    <ul class="career__list list">
+                        <li class="career__item">Communication</li>
+                        <li class="career__item">Cleanliness</li>
+                        <li class="career__item">Attention to Detail</li>
+                        <li class="career__item">Customer Service</li>
+                        <li class="career__item">Work Ethic</li>
+                    </ul>
+                    <p>If you possess these qualities, then please apply. Our doors are always open.</p>
+                </div>
+
+                <div class="career__img">
+                    <img src="../assets/employee.jpg" alt="employee photo">
+                </div>
+            </div>
+            <button class="btn career__btn" onclick="document.getElementById('applyModal').showModal()">Apply Now!</button>
+        </div>
+    </section>
+
+    <dialog class="apply" id="applyModal">
+        <img src="../assets//icons/close.png" alt="close button" class="close apply__close" onclick="closeApply()">
+        <form action="/contact" method="POST" id="applyForm">
+            <div class="row">
+                <div class="apply__box">
+                    <label class="apply__label" for="apply-fname">First Name:</label>
+                    <input type="text" value="" name="fname" id="apply-fname" class="apply__field" required>
+                </div>
+                <div class="apply__box">
+                    <label class="apply__label" for="apply-lname">Last Name:</label>
+                    <input type="text" value="" name="lname" id="apply-lname" class="apply__field" required>
+                </div>
+            </div>
+            <div class="apply__box">
+                <label class="apply__label" for="apply-email">Email:</label>
+                <input type="email" value="" name="email" id="apply-email" class="apply__field" required>
+            </div>
+            <div class="apply__box">
+                <label class="apply__label" for="apply-phone">Phone:</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="" name="phone" id="apply-phone" class="apply__field" required>
+            </div>
+            <div class="apply__box">
+                <label for="apply-resume" class="apply__label">Attach Resume:</label>
+                <input type="file" name="resume" id="apply-resume" class="apply__field" required>
+            </div>
+            <input type="submit" class="apply__submit btn">
+        </form>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="container">
+            <div class="footer__row row">
+                <ul class="footer__nav col">
+                    <li class="footer__item col"><a href="../index.html" class="footer__link">Home</a></li>
+                    <li class="footer__item col"><a href="../pages/menu.html" class="footer__link">Menu</a></li>
+                    <li class="footer__item col"><a href="../pages/about.html" class="footer__link">About Us</a></li>
+                    <li class="footer__item col"><a href="../pages/careers.html" class="footer__link">Careers</a></li>
+                </ul>
+                <div class="footer__contacts col">
+                    <div class="footer__socials">
+                        <a class="footer__icon-link" href="https://www.facebook.com/eatlospolloshermanos" target="_blank"><img class="footer__icon" src="../assets/icons/facebook-icon.png" alt="facebook icon"></a>
+                        <a class="footer__icon-link" href="https://www.instagram.com/eatlospolloshermanos/" target="_blank"><img class="footer__icon" src="../assets/icons/instagram-icon.png" alt="instagram icon"></a>
+                        <a class="footer__icon-link" href="https://twitter.com/eatlospollos" target="_blank"><img class="footer__icon" src="../assets/icons/twitter-icon.png" alt="twitter icon"></a>
+                    </div>
+                    <p class="footer__email">lospolloshermanos@madrigal.com</p>
+                    <p class="footer__phone">555-487-8280</p>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <a href="#" class="footer__terms">Terms and Conditions</a>
+                <a href="#" class="footer__privacy">Privacy Policy</a>
+            </div>
+            <p class="footer__copyright">Copyright © 2022 Los Pollos Hermanos LLC.</p>
+        </div>
+    </footer>
+</body>
+</html>
