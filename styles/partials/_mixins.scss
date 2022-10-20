@@ -2,7 +2,7 @@
     position: #{$position};
     top: 50%;
     left: 50%;
-    translate: -50%, -50%;
+    translate: -50% -50%;
 }
 
 @mixin background-pattern($color, $dark: false) {
@@ -21,4 +21,11 @@
     & + & {
         margin-#{$direction}: $gap;
     }
+}
+
+@mixin header($size: inherit, $font: $header, $margin: 0, $centered: true, $uppercase: false) {
+    font: $size $header;
+    margin: $margin;
+    text-align: if($centered, center, inherit);
+    text-transform: if($uppercase, uppercase, none);
 }

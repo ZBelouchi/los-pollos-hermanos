@@ -6,8 +6,10 @@
     box-sizing: border-box
     margin: 0
 
-body
-    font-family: $normal
+html
+    font: 22px $normal
+    @include lg
+        font-size: 24px
 img
     max-width: 100%
 ul
@@ -18,9 +20,13 @@ li
 a
     color: inherit
     text-decoration: none
+h1, h2, h3
+    font-family: $header
+    margin: 0.4em 0
+    text-align: center
 
 .section
-    padding: 0.2em 0
+    padding: 1em 0
     width: 100%
 .container
     width: 80%
@@ -32,11 +38,11 @@ a
         width: 90%
         max-width: 1350px
 .btn
-    font: 2.6rem $header
+    font: 2rem $header
     display: block
     width: fit-content
     padding: 0.2em 0.5em
-    border: 2px solid $navy
+    border: 2px solid black
     border-radius: 12px
     background: $red
     color: white
@@ -44,10 +50,39 @@ a
     width: fit-content
     margin: auto
     list-style: initial
-    li
-        font-size: 0.8em       
-        width: fit-content
-        margin: auto
+.header
+    // //btn
+    // font: 2.6rem $header
+    // //hero
+    // font: 1.5em $header
+    // margin-bottom: 0.5em
+    // //promo
+    // font: 2.5em $header
+    // margin: 0.5em 0
+    
+    // font-family: $header
+    // //social
+    // font: 3em $header
+    // margin: 0.8em 0
+    // text-align: center
+    // //locations
+    // font-family: $header
+    // max-width: 800px
+    // padding: 0.5em 1em
+    // margin: auto
+    // //menu
+    // font: 3rem $header
+    // text-transform: upper
+    // //about
+    // font-family: $header
+    // //career
+    // font: 2em $header
+    // //apply
+    // font: 1.2rem $header  
+    
+    // font: 2rem $header
+
+
 
 // Global
 .nav
@@ -67,7 +102,7 @@ a
         @include md
             display: none
     &__list
-        font: 2.5rem $styled
+        font: 2rem $styled
         @include nav
             display: none
             &[data-visible]
@@ -90,11 +125,12 @@ a
             justify-content: end
             width: 100%
             li
-                font-size: clamp(2.2rem, 3.8vmax, 3.5rem)
                 margin-left: 1em
                 white-space: nowrap
+        @include lg
+            font: 2.5rem $styled
 .footer
-    font-size: 0.8rem
+    font-size: 0.6rem
     padding: 1.5em 0
     @include background-pattern(black, $dark: true)
     color: white
@@ -144,7 +180,6 @@ a
 
 // Home
 .hero
-    font-size: 1.8rem
     @include background-pattern($rosewood)
     color: white
     .container
@@ -153,26 +188,19 @@ a
         width: 100%
         padding: 1em
         text-align: center
-    &__header
-        font: 1.5em $header
-        margin-bottom: 0.5em
     &__img
         width: fit-content
         height: 100%
         margin: auto
         object-fit: cover
     &__subtitle
-        font-size: 1rem
+        font-size: 1.1rem
         color: $yellow
         text-align: right
 .promo
-    font-size: 1.5rem
-    @include background-pattern($blue)
-    text-align: center
-    &__header
-        font: 2.5em $header
-        margin: 0.5em 0
+    @include background-pattern($tan)
     &__item
+        text-align: center
         width: 100%
         max-width: 400px
         margin: auto
@@ -180,8 +208,6 @@ a
             margin: initial
     &__text
         padding: 0.5em 0.8em
-    &__name
-        font-family: $header
     &__btn
         margin: 0.5em auto
 .social
@@ -189,10 +215,10 @@ a
         width: fit-content
         margin: auto
     &__icon
-        width: 8em
+        width: 2em
         filter: invert(100%)
         &--link
-            @include row-gap(2em)
+            @include row-gap(1em)
     &__photos
         flex-wrap: wrap
     &__photo
@@ -203,20 +229,18 @@ a
         @include lg
             width: 50%
     &__header
-        font: 3em $header
-        margin: 0.8em 0
-        text-align: center
+        // font: 3em $header
+        // margin: 0.8em 0
+        // text-align: center
 .locations
-    font-size: 1.8rem
     @include background-pattern($navy)
     color: white
     text-align: center
     &__header
-        font-family: $header
-        max-width: 800px
-        padding: 0.5em 1em
+        max-width: 600px
         margin: auto
     &__row
+        font-size: 0.8rem
         display: flex
         flex-wrap: wrap
     &__group
@@ -226,6 +250,9 @@ a
             width: 50%
         @include lg
             width: 25%
+.job
+    &__btn
+        margin: auto
 
 // Menu
 .menu-nav
@@ -235,29 +262,22 @@ a
         display: flex
         flex-wrap: wrap
         justify-content: center
-        text-align: center
         @include md
             justify-content: space-between
     &__item
-        font-size: 1.2rem
+        font-size: 0.8rem
         width: 25%
         padding: 0.5em 0
+        text-align: center
         &:hover
             background: darken($red, 8)
         @include xs
             width: 50%
         @include sm
             width: 20%
-            padding: 0.8em 0
-        @include md
-            width: 10%
 .menu
     padding: 0
-    .container
-        @include lg
-            max-width: 880px
     &__group
-        font-size: 1.6rem
         &:nth-of-type(even) > .row
             @include md
                 flex-flow: row-reverse   
@@ -268,13 +288,12 @@ a
         padding: 1em
     &__textbox
         padding: 1em
-        background: #ffffff99
+        background: $alpha-white
         text-align: center
-    &__header
-        font: 3rem $header
-        text-transform: upper
+    &__name
+        font-weight: bold
     &__desc
-        font-size: 0.5em
+        font-size: 0.8rem
     &__photo
         display: flex
         flex-direction: column
@@ -291,24 +310,27 @@ a
 
 // About Us
 .story
-    font-size: 1.2rem
     padding: 2em
     background-image: url('../assets/spices.jpg')
     background-position: center
-    color: white
+    color: black
     text-align: center
-    @include md
-        font-size: 2rem
-        padding: 2.5em
-.about
-    padding: 2em
     &__text
-        font-size: 2rem
+        padding: 0.5em
+        border-radius: 8px
+        background: $alpha-white
+        @include md
+            max-width: 800px
+    @include md
+        font-size: 1.4rem
+.about
+    &__text
         padding: 1em
         text-align: center
-    &__header
-        font-family: $header
     &__img
+    &:nth-child(odd)
+        .container
+            flex-direction: row-reverse
     @each $key in map-keys($about-colors)
         &--#{$key}
             @include background-pattern(nth(map-get($about-colors, $key), 1), $dark: false)
@@ -316,23 +338,19 @@ a
 
 // Careers
 .career
-    font-size: 1.5rem
-    padding: 1em
-    text-align: center
     &--top
+        text-align: center
         @include background-pattern($red)
         color: white
         .container
-            max-width: 576px
-    &__header
-        font: 2em $header
+            max-width: 600px
     &__text
         padding: 1em
     &__btn
-        margin: auto
+        margin: 0.5em auto
 .apply
     @include center($position: fixed)
-    padding: 2.5em
+    padding: 2em
     &__close
         position: absolute
         top: 2%
@@ -341,19 +359,10 @@ a
     &__box
         display: flex
         flex-direction: column
-        padding: 0.2em
-    &__label
-        font: 1.2rem $header  
-    &__field
-        font-size: 1.2rem
+        padding: 0.4em
     &__submit
-        font: 2rem $header
-        display: block 
-        width: fit-content
+        font-size: 1rem
         margin: 0.5em auto
-        background: $red
-        color: white
-
 
 @include lg
     .row
@@ -365,5 +374,3 @@ a
     .grid
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-    .cell
-        width: 100%
