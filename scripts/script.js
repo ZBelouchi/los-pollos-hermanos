@@ -38,5 +38,6 @@ applyForm.addEventListener('submit', e => {
         resume: applyForm.resume.value
     }
 
-    // console.log(response);
+    // Front-End only, there is no back-end so the collected data is printed out
+    console.log(response);
 })
