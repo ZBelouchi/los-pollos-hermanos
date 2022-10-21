@@ -71,7 +71,8 @@ h1, h2, h3
         @include md
             display: none
     &__list
-        font: 2rem $styled
+        font: 1.4rem $header
+        // small screen
         @include nav
             display: none
             &[data-visible]
@@ -89,6 +90,7 @@ h1, h2, h3
                     text-align: center
                     &:hover
                         background: darken($red, 6)
+        // wide screen
         @include md
             display: flex
             justify-content: end
@@ -97,7 +99,7 @@ h1, h2, h3
                 margin-left: 1em
                 white-space: nowrap
         @include lg
-            font: 2.5rem $styled
+            font-size: 2.2rem
 .footer
     font-size: 0.6rem
     padding: 1.5em 0
@@ -295,7 +297,6 @@ h1, h2, h3
     &__text
         padding: 1em
         text-align: center
-    &__img
     &:nth-child(odd)
         .container
             flex-direction: row-reverse
