@@ -1,0 +1,20 @@
+{
+  "name": "los-pollos-hermanos",
+  "version": "1.2.0",
+  "description": "mock website for fictional restaraunt Los Pollos Hermanos",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass .\\styles\\style.sass .\\styles\\style.css --watch",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZBelouchi/los-pollos-hermanos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZBelouchi/los-pollos-hermanos/issues"
+  },
+  "homepage": "https://github.com/ZBelouchi/los-pollos-hermanos#readme"
+}
