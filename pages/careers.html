@@ -15,7 +15,9 @@
     <!-- Navbar -->
     <header class="section nav">
         <div class="container container--wide nav__row">
-            <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            <a href="../index.html" class="nav__logo-box">
+                <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            </a>
             <img src="../assets/icons/hamburger.png" alt="button" class="nav__button" onclick="dropDown()">
             <ul class="nav__list" id="nav__list">
                 <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
@@ -52,7 +54,7 @@
                     <img src="../assets/employee.jpg" alt="employee photo">
                 </div>
             </div>
-            <button class="btn career__btn" onclick="document.getElementById('applyModal').showModal()">Apply Now!</button>
+            <button class="btn career__btn" onclick="openApply()">Apply Now!</button>
         </div>
     </section>
 
@@ -78,11 +80,16 @@
                 <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="" name="phone" id="apply-phone" class="apply__field" required>
             </div>
             <div class="apply__box">
-                <label for="apply-resume" class="apply__label">Attach Resume:</label>
-                <input type="file" name="resume" id="apply-resume" class="apply__field" required>
+                <label for="apply-resume" class="apply__label">(opt.) Attach Resume:</label>
+                <input type="file" name="resume" id="apply-resume" class="apply__field">
             </div>
             <input type="submit" class="apply__submit btn">
         </form>
+    </dialog>
+
+    <dialog class="submitted" id="submittedModal">
+        <img src="../assets//icons/close.png" alt="close button" class="close apply__close" onclick="closeSubmitted()">
+        <h2 class="submitted__text">Thank you for your application!</h2>
     </dialog>
 
     <!-- Footer -->

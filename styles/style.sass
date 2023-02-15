@@ -22,6 +22,9 @@ a
     text-decoration: none
 h1, h2, h3
     font-family: $header
+    // font-family: $stylized
+    // text-transform: capitalize
+    // scale: 1.2
     margin: 0.4em 0
     text-align: center
 
@@ -46,6 +49,10 @@ h1, h2, h3
     border-radius: 12px
     background: $red
     color: white
+    transition: background 0.10s ease 0s
+    &:hover
+        background: lighten($red, 6)
+        
 .list
     width: fit-content
     margin: auto
@@ -64,6 +71,9 @@ h1, h2, h3
         align-items: end
         position: relative
         height: 100%
+    &__logo-box
+        height: 100%
+        aspect-ratio: 1/1
     &__logo
         height: 100%
     &__button
@@ -71,23 +81,25 @@ h1, h2, h3
         @include md
             display: none
     &__list
-        font: 1.4rem $header
+        font: 1.4rem $stylized
         // small screen
         @include nav
             display: none
             &[data-visible]
                 position: absolute
-                translate: -5% 103%
+                z-index: 100
+                translate: -5% 107%
                 display: flex
                 flex-wrap: wrap
                 width: 100vw
                 border: 1px solid $navy
-                padding: 0.5em
+                padding: 0.5em 0
                 background: $red
                 color: white
                 li
                     width: 100%
                     text-align: center
+                    transition: background 0.10s ease 0s
                     &:hover
                         background: darken($red, 6)
         // wide screen
@@ -98,8 +110,12 @@ h1, h2, h3
             li
                 margin-left: 1em
                 white-space: nowrap
+                color: black
+                transition: color 0.15s ease 0s
+                &:hover
+                    color: darken($blue, 15)
         @include lg
-            font-size: 2.2rem
+            font-size: 2.5rem
 .footer
     font-size: 0.6rem
     padding: 1.5em 0
@@ -164,6 +180,8 @@ h1, h2, h3
         height: 100%
         margin: auto
         object-fit: cover
+        img
+            @include handdrawn-border($navy, 10px)
     &__subtitle
         font-size: 0.8rem
         color: $yellow
@@ -195,10 +213,12 @@ h1, h2, h3
     &__photo
         display: inline
         aspect-ratio: 1/1
-        padding: 0.5em
+        margin: 0.5em
         object-fit: cover
         @include lg
-            width: 50%
+            width: 30%
+        &--post
+            @include handdrawn-border($navy, 4px)
 .locations
     @include background-pattern($navy)
     color: white
@@ -224,6 +244,7 @@ h1, h2, h3
 
 // Menu
 .menu-nav
+    padding: 0
     background: $red
     color: white
     &__list
@@ -237,6 +258,7 @@ h1, h2, h3
         width: 25%
         padding: 0.5em 0
         text-align: center
+        transition: background 0.10s ease 0s
         &:hover
             background: darken($red, 8)
         @include xs
@@ -256,7 +278,8 @@ h1, h2, h3
         padding: 1em
     &__textbox
         padding: 1em
-        background: $alpha-white
+        @include blurred-overlay
+        border-radius: 4px
         text-align: center
     &__name
         font-weight: bold
@@ -267,16 +290,20 @@ h1, h2, h3
         flex-direction: column
         justify-content: center
         &-img
-            border-radius: 12px
+            max-height: 620px
+            object-fit: cover
+            object-position: bottom
     &__kids
         img
-            margin: 0.5em 0
+            margin: 0 0.5em
     @each $key in map-keys($menu-colors)
         &__#{$key}
             padding: 80px 0
-            @include background-pattern(map-get($menu-colors, $key))
+            @include background-pattern(nth(map-get($menu-colors, $key), 1))
             @if $key != "specials"
                 @include jagged
+            img
+                @include handdrawn-border(nth(map-get($menu-colors, $key), 2), 11px)
 
 // About Us
 .story
@@ -287,8 +314,8 @@ h1, h2, h3
     text-align: center
     &__text
         padding: 0.5em
-        border-radius: 8px
-        background: $alpha-white
+        border-radius: 4px
+        @include blurred-overlay
         @include md
             max-width: 800px
     @include md
@@ -304,6 +331,8 @@ h1, h2, h3
         &--#{$key}
             @include background-pattern(nth(map-get($about-colors, $key), 1), $dark: false)
             color: nth(map-get($about-colors, $key), 2)
+            img
+                @include handdrawn-border(nth(map-get($about-colors, $key), 3), 11px)
 
 // Careers
 .career
@@ -317,9 +346,12 @@ h1, h2, h3
         padding: 1em
     &__btn
         margin: 0.5em auto
-.apply
+.apply, .submitted
     @include center($position: fixed)
     padding: 2em
+    .apply
+        transition: opacity 0.1s ease 0s
+        opacity: 0%
     &__close
         position: absolute
         top: 2%

@@ -8,6 +8,11 @@
 @mixin background-pattern($color, $dark: false) {
     background: if($dark, url('../assets/patterns/pattern-dark.png'), url('../assets/patterns/pattern-light.png')) repeat #{random(1000) - 500}px #{random(1000) - 500}px, $color;
 }
+@mixin blurred-overlay() {
+    background: transparentize(white, 0.25);
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 5px transparentize(black, 0.4);
+}
 @mixin jagged {
     @each $pre in ("-webkit-mask", "mask") {
         #{$pre}: 
@@ -15,6 +20,16 @@
         conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /60px 51%;
     }
     margin-top: -50px;
+}
+@mixin handdrawn-border($color, $width, $l-floor: 120, $l-ceil: 260, $s-floor: 7, $s-ceil: 18)  {
+    $l-ceil: $l-ceil - $l-floor;
+    $s-ceil: $s-ceil - $s-floor;
+    border-radius: (
+        #{$l-floor + random($l-ceil)}px #{$s-floor + random($s-ceil)}px #{$l-floor + random($l-ceil)}px #{$s-floor + random($s-ceil)}px / 
+        #{$s-floor + random($s-ceil)}px #{$l-floor + random($l-ceil)}px #{$s-floor + random($s-ceil)}px #{$l-floor + random($l-ceil)}px
+    );
+    line-height: 1.5em;
+    border: solid $width $color;
 }
 
 @mixin row-gap($gap, $direction: "left") {

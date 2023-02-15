@@ -6,6 +6,10 @@
   font-family: "Arimo";
   src: url("../assets/fonts/arimo/Arimo-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "JI_Burrito";
+  src: url("../assets/fonts/ji-burrito/JI_Burrito.ttf");
+}
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -73,6 +77,10 @@ h1, h2, h3 {
   border-radius: 12px;
   background: #bc0000;
   color: white;
+  transition: background 0.1s ease 0s;
+}
+.btn:hover {
+  background: #db0000;
 }
 
 .list {
@@ -93,6 +101,10 @@ h1, h2, h3 {
   position: relative;
   height: 100%;
 }
+.nav__logo-box {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
 .nav__logo {
   height: 100%;
 }
@@ -105,7 +117,7 @@ h1, h2, h3 {
   }
 }
 .nav__list {
-  font: 1.4rem "Chivo";
+  font: 1.4rem "JI_Burrito";
 }
 @media (max-width: 799px) {
   .nav__list {
@@ -113,18 +125,20 @@ h1, h2, h3 {
   }
   .nav__list[data-visible] {
     position: absolute;
-    translate: -5% 103%;
+    z-index: 100;
+    translate: -5% 107%;
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
     border: 1px solid #2f2f5e;
-    padding: 0.5em;
+    padding: 0.5em 0;
     background: #bc0000;
     color: white;
   }
   .nav__list[data-visible] li {
     width: 100%;
     text-align: center;
+    transition: background 0.1s ease 0s;
   }
   .nav__list[data-visible] li:hover {
     background: #9d0000;
@@ -139,18 +153,23 @@ h1, h2, h3 {
   .nav__list li {
     margin-left: 1em;
     white-space: nowrap;
+    color: black;
+    transition: color 0.15s ease 0s;
+  }
+  .nav__list li:hover {
+    color: #005b8d;
   }
 }
 @media (min-width: 1100px) {
   .nav__list {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
 
 .footer {
   font-size: 0.6rem;
   padding: 1.5em 0;
-  background: url("../assets/patterns/pattern-dark.png") repeat 81px 398px, black;
+  background: url("../assets/patterns/pattern-dark.png") repeat -403px 112px, black;
   color: white;
   text-align: center;
 }
@@ -212,7 +231,7 @@ h1, h2, h3 {
 }
 
 .hero {
-  background: url("../assets/patterns/pattern-light.png") repeat 499px 83px, #351111;
+  background: url("../assets/patterns/pattern-light.png") repeat -78px 40px, #351111;
   color: white;
 }
 .hero .container {
@@ -229,6 +248,11 @@ h1, h2, h3 {
   margin: auto;
   object-fit: cover;
 }
+.hero__img img {
+  border-radius: 134px 18px 157px 10px/11px 260px 17px 197px;
+  line-height: 1.5em;
+  border: solid 10px #2f2f5e;
+}
 .hero__subtitle {
   font-size: 0.8rem;
   color: #ffe70f;
@@ -236,7 +260,7 @@ h1, h2, h3 {
 }
 
 .promo {
-  background: url("../assets/patterns/pattern-light.png") repeat -150px -388px, #fffbb1;
+  background: url("../assets/patterns/pattern-light.png") repeat 372px -365px, #fffbb1;
 }
 .promo__item {
   text-align: center;
@@ -273,17 +297,22 @@ h1, h2, h3 {
 .social__photo {
   display: inline;
   aspect-ratio: 1/1;
-  padding: 0.5em;
+  margin: 0.5em;
   object-fit: cover;
 }
 @media (min-width: 1100px) {
   .social__photo {
-    width: 50%;
+    width: 30%;
   }
+}
+.social__photo--post {
+  border-radius: 126px 16px 185px 17px/17px 130px 11px 241px;
+  line-height: 1.5em;
+  border: solid 4px #2f2f5e;
 }
 
 .locations {
-  background: url("../assets/patterns/pattern-light.png") repeat -7px 280px, #2f2f5e;
+  background: url("../assets/patterns/pattern-light.png") repeat -347px -445px, #2f2f5e;
   color: white;
   text-align: center;
 }
@@ -317,6 +346,7 @@ h1, h2, h3 {
 }
 
 .menu-nav {
+  padding: 0;
   background: #bc0000;
   color: white;
 }
@@ -335,6 +365,7 @@ h1, h2, h3 {
   width: 25%;
   padding: 0.5em 0;
   text-align: center;
+  transition: background 0.1s ease 0s;
 }
 .menu-nav__item:hover {
   background: #930000;
@@ -366,7 +397,10 @@ h1, h2, h3 {
 }
 .menu__textbox {
   padding: 1em;
-  background: rgba(255, 255, 255, 0.5490196078);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
   text-align: center;
 }
 .menu__name {
@@ -381,77 +415,129 @@ h1, h2, h3 {
   justify-content: center;
 }
 .menu__photo-img {
-  border-radius: 12px;
+  max-height: 620px;
+  object-fit: cover;
+  object-position: bottom;
 }
 .menu__kids img {
-  margin: 0.5em 0;
+  margin: 0 0.5em;
 }
 .menu__specials {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 208px 315px, #ffe70f;
+  background: url("../assets/patterns/pattern-light.png") repeat -200px -246px, #ffe70f;
+}
+.menu__specials img {
+  border-radius: 122px 16px 160px 16px/16px 163px 14px 152px;
+  line-height: 1.5em;
+  border: solid 11px #600071;
 }
 .menu__chicken {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 204px -264px, #008dd9;
+  background: url("../assets/patterns/pattern-light.png") repeat -338px -376px, #008dd9;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__chicken img {
+  border-radius: 164px 11px 201px 10px/9px 255px 8px 138px;
+  line-height: 1.5em;
+  border: solid 11px #126707;
 }
 .menu__platters {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 97px 361px, #600071;
+  background: url("../assets/patterns/pattern-light.png") repeat 212px 245px, #600071;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__platters img {
+  border-radius: 174px 14px 162px 11px/11px 259px 10px 139px;
+  line-height: 1.5em;
+  border: solid 11px #ff5500;
 }
 .menu__burritos {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 333px -181px, #126707;
+  background: url("../assets/patterns/pattern-light.png") repeat -116px -460px, #126707;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__burritos img {
+  border-radius: 253px 18px 252px 12px/13px 154px 10px 189px;
+  line-height: 1.5em;
+  border: solid 11px #ffe70f;
 }
 .menu__burgers {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -272px 452px, #bc0000;
+  background: url("../assets/patterns/pattern-light.png") repeat 298px 120px, #bc0000;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__burgers img {
+  border-radius: 224px 8px 149px 13px/8px 212px 9px 134px;
+  line-height: 1.5em;
+  border: solid 11px #ff5500;
 }
 .menu__breakfast {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 493px -163px, #600071;
+  background: url("../assets/patterns/pattern-light.png") repeat -219px -488px, #600071;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__breakfast img {
+  border-radius: 158px 18px 154px 17px/11px 252px 13px 197px;
+  line-height: 1.5em;
+  border: solid 11px #bc0000;
 }
 .menu__kids {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 466px -416px, #008dd9;
+  background: url("../assets/patterns/pattern-light.png") repeat 366px 152px, #008dd9;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__kids img {
+  border-radius: 153px 17px 171px 14px/18px 150px 13px 158px;
+  line-height: 1.5em;
+  border: solid 11px #126707;
 }
 .menu__sides {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 220px -368px, #ffe70f;
+  background: url("../assets/patterns/pattern-light.png") repeat -362px -35px, #ffe70f;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__sides img {
+  border-radius: 162px 13px 233px 13px/12px 229px 18px 146px;
+  line-height: 1.5em;
+  border: solid 11px #600071;
 }
 .menu__drinks {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 55px 452px, #bc0000;
+  background: url("../assets/patterns/pattern-light.png") repeat -463px -295px, #bc0000;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
+.menu__drinks img {
+  border-radius: 132px 8px 210px 12px/12px 160px 10px 124px;
+  line-height: 1.5em;
+  border: solid 11px #008dd9;
+}
 .menu__desserts {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 75px 33px, #600071;
+  background: url("../assets/patterns/pattern-light.png") repeat -459px -368px, #600071;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
+}
+.menu__desserts img {
+  border-radius: 257px 18px 231px 18px/9px 225px 16px 181px;
+  line-height: 1.5em;
+  border: solid 11px #ffe70f;
 }
 
 .story {
@@ -463,8 +549,10 @@ h1, h2, h3 {
 }
 .story__text {
   padding: 0.5em;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.5490196078);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 800px) {
   .story__text {
@@ -485,21 +573,36 @@ h1, h2, h3 {
   flex-direction: row-reverse;
 }
 .about--heritage {
-  background: url("../assets/patterns/pattern-light.png") repeat 136px 178px, #fffbb1;
-  color: black;
+  background: url("../assets/patterns/pattern-light.png") repeat -33px 355px, #fffbb1;
+  color: #000000;
+}
+.about--heritage img {
+  border-radius: 167px 9px 177px 9px/16px 156px 12px 152px;
+  line-height: 1.5em;
+  border: solid 11px #351111;
 }
 .about--quality {
-  background: url("../assets/patterns/pattern-light.png") repeat -176px 393px, #351111;
-  color: white;
+  background: url("../assets/patterns/pattern-light.png") repeat -241px 173px, #351111;
+  color: #ffffff;
+}
+.about--quality img {
+  border-radius: 147px 10px 234px 10px/15px 218px 8px 230px;
+  line-height: 1.5em;
+  border: solid 11px #2f2f5e;
 }
 .about--community {
-  background: url("../assets/patterns/pattern-light.png") repeat -237px -347px, #2f2f5e;
-  color: white;
+  background: url("../assets/patterns/pattern-light.png") repeat 32px -151px, #2f2f5e;
+  color: #ffffff;
+}
+.about--community img {
+  border-radius: 206px 13px 229px 11px/16px 222px 18px 121px;
+  line-height: 1.5em;
+  border: solid 11px #fffbb1;
 }
 
 .career--top {
   text-align: center;
-  background: url("../assets/patterns/pattern-light.png") repeat -381px 0px, #bc0000;
+  background: url("../assets/patterns/pattern-light.png") repeat -138px 483px, #bc0000;
   color: white;
 }
 .career--top .container {
@@ -512,25 +615,29 @@ h1, h2, h3 {
   margin: 0.5em auto;
 }
 
-.apply {
+.apply, .submitted {
   position: fixed;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   padding: 2em;
 }
-.apply__close {
+.apply .apply, .submitted .apply {
+  transition: opacity 0.1s ease 0s;
+  opacity: 0%;
+}
+.apply__close, .submitted__close {
   position: absolute;
   top: 2%;
   right: 2%;
   width: 6%;
 }
-.apply__box {
+.apply__box, .submitted__box {
   display: flex;
   flex-direction: column;
   padding: 0.4em;
 }
-.apply__submit {
+.apply__submit, .submitted__submit {
   font-size: 1rem;
   margin: 0.5em auto;
 }

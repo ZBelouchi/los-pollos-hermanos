@@ -8,29 +8,32 @@ $red: #bc0000;
 $rosewood: #351111;
 $tan: #fffbb1;
 $yellow: #ffe70f;
-$alpha-white: #ffffff8c;
+$black: #000000;
+$white: #ffffff;
 
 // fonts
 @font-face {font-family: 'Chivo'; src: url('../assets/fonts/chivo/Chivo-Bold.ttf');};
 $header: 'Chivo';
 @font-face {font-family: 'Arimo'; src: url('../assets/fonts/arimo/Arimo-VariableFont_wght.ttf');};
 $normal: 'Arimo';
+@font-face {font-family: 'JI_Burrito'; src: url('../assets/fonts/ji-burrito/JI_Burrito.ttf');};
+$stylized: 'JI_Burrito';
 
 // maps
-$about-colors: (
-    heritage : ($tan, black),
-    quality : ($rosewood, white),
-    community : ($navy, white),
+$about-colors: (// background   font     border
+    heritage    : ($tan,        $black,  $rosewood),
+    quality     : ($rosewood,   $white,  $navy),
+    community   : ($navy,       $white,  $tan),
 );
-$menu-colors: (
-    specials : $yellow,
-    chicken : $blue,
-    platters : $purple,
-    burritos : $green,
-    burgers : $red,
-    breakfast : $purple,
-    kids : $blue,
-    sides : $yellow,
-    drinks : $red,
-    desserts : $purple,
+$menu-colors: (// background   border
+    specials   : ($yellow,     $purple),
+    chicken    : ($blue,       $green),
+    platters   : ($purple,     $orange),
+    burritos   : ($green,      $yellow),
+    burgers    : ($red,        $orange),
+    breakfast  : ($purple,     $red),
+    kids       : ($blue,       $green),
+    sides      : ($yellow,     $purple),
+    drinks     : ($red,        $blue),
+    desserts   : ($purple,     $yellow),
 );
