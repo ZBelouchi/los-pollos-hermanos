@@ -44,7 +44,8 @@ a {
 
 h1, h2, h3 {
   font-family: "Chivo";
-  margin: 0.4em 0;
+  width: fit-content;
+  margin: 0.4em auto;
   text-align: center;
 }
 
@@ -83,10 +84,9 @@ h1, h2, h3 {
   background: #db0000;
 }
 
-.list {
+.list li {
   width: fit-content;
   margin: auto;
-  list-style: initial;
 }
 
 .nav {
@@ -169,7 +169,7 @@ h1, h2, h3 {
 .footer {
   font-size: 0.6rem;
   padding: 1.5em 0;
-  background: url("../assets/patterns/pattern-dark.png") repeat -403px 112px, black;
+  background: url("../assets/patterns/pattern-dark.png") repeat -487px 9px, black;
   color: white;
   text-align: center;
 }
@@ -231,7 +231,7 @@ h1, h2, h3 {
 }
 
 .hero {
-  background: url("../assets/patterns/pattern-light.png") repeat -78px 40px, #351111;
+  background: url("../assets/patterns/pattern-light.png") repeat 144px 379px, #351111;
   color: white;
 }
 .hero .container {
@@ -242,6 +242,13 @@ h1, h2, h3 {
   padding: 0.5em 1em;
   text-align: center;
 }
+.hero__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-navy.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .hero__img {
   width: fit-content;
   height: 100%;
@@ -249,7 +256,7 @@ h1, h2, h3 {
   object-fit: cover;
 }
 .hero__img img {
-  border-radius: 134px 18px 157px 10px/11px 260px 17px 197px;
+  border-radius: 125px 8px 213px 10px/14px 228px 16px 177px;
   line-height: 1.5em;
   border: solid 10px #2f2f5e;
 }
@@ -260,7 +267,7 @@ h1, h2, h3 {
 }
 
 .promo {
-  background: url("../assets/patterns/pattern-light.png") repeat 372px -365px, #fffbb1;
+  background: url("../assets/patterns/pattern-light.png") repeat 130px -238px, #fffbb1;
 }
 .promo__item {
   text-align: center;
@@ -276,10 +283,24 @@ h1, h2, h3 {
 .promo__text {
   padding: 0.5em 0.8em;
 }
+.promo__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-black.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .promo__btn {
   margin: 0.5em auto;
 }
 
+.social__header--main {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-navy.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .social__icons {
   width: fit-content;
   margin: auto;
@@ -306,13 +327,13 @@ h1, h2, h3 {
   }
 }
 .social__photo--post {
-  border-radius: 126px 16px 185px 17px/17px 130px 11px 241px;
+  border-radius: 140px 16px 206px 11px/9px 177px 18px 247px;
   line-height: 1.5em;
   border: solid 4px #2f2f5e;
 }
 
 .locations {
-  background: url("../assets/patterns/pattern-light.png") repeat -347px -445px, #2f2f5e;
+  background: url("../assets/patterns/pattern-light.png") repeat -113px -347px, #2f2f5e;
   color: white;
   text-align: center;
 }
@@ -403,6 +424,12 @@ h1, h2, h3 {
   border-radius: 4px;
   text-align: center;
 }
+.menu__header {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  scale: 1.1;
+  font-family: "JI_Burrito";
+}
 .menu__name {
   font-weight: bold;
 }
@@ -413,6 +440,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0.75em 0;
 }
 .menu__photo-img {
   max-height: 620px;
@@ -424,120 +452,190 @@ h1, h2, h3 {
 }
 .menu__specials {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -200px -246px, #ffe70f;
+  background: url("../assets/patterns/pattern-light.png") repeat -333px -316px, #ffe70f;
 }
 .menu__specials img {
-  border-radius: 122px 16px 160px 16px/16px 163px 14px 152px;
+  border-radius: 218px 17px 132px 16px/10px 241px 11px 155px;
   line-height: 1.5em;
   border: solid 11px #600071;
 }
+.menu__specials .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-purple.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__chicken {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -338px -376px, #008dd9;
+  background: url("../assets/patterns/pattern-light.png") repeat 228px -184px, #008dd9;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__chicken img {
-  border-radius: 164px 11px 201px 10px/9px 255px 8px 138px;
+  border-radius: 132px 13px 195px 12px/10px 180px 12px 256px;
   line-height: 1.5em;
   border: solid 11px #126707;
 }
+.menu__chicken .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-blue.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__platters {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 212px 245px, #600071;
+  background: url("../assets/patterns/pattern-light.png") repeat 256px 149px, #600071;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__platters img {
-  border-radius: 174px 14px 162px 11px/11px 259px 10px 139px;
+  border-radius: 172px 15px 134px 9px/16px 190px 17px 161px;
   line-height: 1.5em;
   border: solid 11px #ff5500;
 }
+.menu__platters .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-purple.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__burritos {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -116px -460px, #126707;
+  background: url("../assets/patterns/pattern-light.png") repeat 95px 103px, #126707;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__burritos img {
-  border-radius: 253px 18px 252px 12px/13px 154px 10px 189px;
+  border-radius: 171px 15px 212px 8px/15px 150px 17px 249px;
   line-height: 1.5em;
   border: solid 11px #ffe70f;
 }
+.menu__burritos .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-green.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__burgers {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 298px 120px, #bc0000;
+  background: url("../assets/patterns/pattern-light.png") repeat 329px -45px, #bc0000;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__burgers img {
-  border-radius: 224px 8px 149px 13px/8px 212px 9px 134px;
+  border-radius: 219px 13px 195px 17px/9px 234px 10px 123px;
   line-height: 1.5em;
   border: solid 11px #ff5500;
 }
+.menu__burgers .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-red.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__breakfast {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -219px -488px, #600071;
+  background: url("../assets/patterns/pattern-light.png") repeat 172px -285px, #600071;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__breakfast img {
-  border-radius: 158px 18px 154px 17px/11px 252px 13px 197px;
+  border-radius: 210px 14px 130px 10px/8px 124px 8px 234px;
   line-height: 1.5em;
   border: solid 11px #bc0000;
 }
+.menu__breakfast .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-purple.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__kids {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat 366px 152px, #008dd9;
+  background: url("../assets/patterns/pattern-light.png") repeat 246px 417px, #008dd9;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__kids img {
-  border-radius: 153px 17px 171px 14px/18px 150px 13px 158px;
+  border-radius: 170px 9px 180px 9px/14px 188px 8px 133px;
   line-height: 1.5em;
   border: solid 11px #126707;
 }
+.menu__kids .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-blue.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__sides {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -362px -35px, #ffe70f;
+  background: url("../assets/patterns/pattern-light.png") repeat 421px -238px, #ffe70f;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__sides img {
-  border-radius: 162px 13px 233px 13px/12px 229px 18px 146px;
+  border-radius: 180px 13px 238px 11px/13px 228px 18px 243px;
   line-height: 1.5em;
   border: solid 11px #600071;
 }
+.menu__sides .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-purple.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__drinks {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -463px -295px, #bc0000;
+  background: url("../assets/patterns/pattern-light.png") repeat -464px 372px, #bc0000;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__drinks img {
-  border-radius: 132px 8px 210px 12px/12px 160px 10px 124px;
+  border-radius: 129px 18px 197px 8px/9px 208px 8px 203px;
   line-height: 1.5em;
   border: solid 11px #008dd9;
 }
+.menu__drinks .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-red.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .menu__desserts {
   padding: 80px 0;
-  background: url("../assets/patterns/pattern-light.png") repeat -459px -368px, #600071;
+  background: url("../assets/patterns/pattern-light.png") repeat -363px 421px, #600071;
   -webkit-mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   mask: conic-gradient(from -45deg at bottom, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) bottom/60px 51% repeat-x, conic-gradient(from 135deg at top, rgba(0, 0, 0, 0), #000 1deg 89deg, rgba(0, 0, 0, 0) 90deg) top/60px 51%;
   margin-top: -50px;
 }
 .menu__desserts img {
-  border-radius: 257px 18px 231px 18px/9px 225px 16px 181px;
+  border-radius: 159px 18px 177px 18px/9px 219px 16px 225px;
   line-height: 1.5em;
   border: solid 11px #ffe70f;
+}
+.menu__desserts .menu__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-purple.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
 }
 
 .story {
@@ -546,6 +644,13 @@ h1, h2, h3 {
   background-position: center;
   color: black;
   text-align: center;
+}
+.story__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-navy.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
 }
 .story__text {
   padding: 0.5em;
@@ -573,36 +678,59 @@ h1, h2, h3 {
   flex-direction: row-reverse;
 }
 .about--heritage {
-  background: url("../assets/patterns/pattern-light.png") repeat -33px 355px, #fffbb1;
+  background: url("../assets/patterns/pattern-light.png") repeat -123px -284px, #fffbb1;
   color: #000000;
 }
 .about--heritage img {
-  border-radius: 167px 9px 177px 9px/16px 156px 12px 152px;
+  border-radius: 124px 11px 123px 18px/10px 250px 8px 200px;
   line-height: 1.5em;
   border: solid 11px #351111;
 }
+.about--heritage .about__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-navy.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .about--quality {
-  background: url("../assets/patterns/pattern-light.png") repeat -241px 173px, #351111;
+  background: url("../assets/patterns/pattern-light.png") repeat -402px 75px, #351111;
   color: #ffffff;
 }
 .about--quality img {
-  border-radius: 147px 10px 234px 10px/15px 218px 8px 230px;
+  border-radius: 131px 10px 168px 8px/9px 163px 12px 256px;
   line-height: 1.5em;
   border: solid 11px #2f2f5e;
 }
+.about--quality .about__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-tan.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 .about--community {
-  background: url("../assets/patterns/pattern-light.png") repeat 32px -151px, #2f2f5e;
+  background: url("../assets/patterns/pattern-light.png") repeat -114px -429px, #2f2f5e;
   color: #ffffff;
 }
 .about--community img {
-  border-radius: 206px 13px 229px 11px/16px 222px 18px 121px;
+  border-radius: 197px 18px 176px 18px/13px 141px 14px 225px;
   line-height: 1.5em;
   border: solid 11px #fffbb1;
 }
+.about--community .about__header {
+  padding-bottom: 0.2em;
+  border-bottom: 0.5em solid;
+  border-image-source: url("../../assets/patterns/zigzag-rosewood.png");
+  border-image-slice: 151;
+  border-image-repeat: repeat;
+}
 
-.career--top {
+.career {
   text-align: center;
-  background: url("../assets/patterns/pattern-light.png") repeat -138px 483px, #bc0000;
+}
+.career--top {
+  background: url("../assets/patterns/pattern-light.png") repeat 465px -245px, #bc0000;
   color: white;
 }
 .career--top .container {
@@ -611,8 +739,23 @@ h1, h2, h3 {
 .career__text {
   padding: 1em;
 }
+.career__list {
+  margin: 0.4em;
+  font-size: 0.95rem;
+}
+.career__photo {
+  display: flex;
+  justify-content: center;
+  max-height: 420px;
+}
+.career__photo img {
+  object-fit: cover;
+  border-radius: 124px 10px 255px 14px/10px 143px 8px 183px;
+  line-height: 1.5em;
+  border: solid 5px #351111;
+}
 .career__btn {
-  margin: 0.5em auto;
+  margin: 0.3em auto;
 }
 
 .apply, .submitted {
@@ -621,6 +764,9 @@ h1, h2, h3 {
   left: 50%;
   translate: -50% -50%;
   padding: 2em;
+}
+.apply__btn, .submitted__btn {
+  margin: 0.5em auto;
 }
 .apply .apply, .submitted .apply {
   transition: opacity 0.1s ease 0s;

@@ -20,20 +20,20 @@ $normal: 'Arimo';
 $stylized: 'JI_Burrito';
 
 // maps
-$about-colors: (// background   font     border
-    heritage    : ($tan,        $black,  $rosewood),
-    quality     : ($rosewood,   $white,  $navy),
-    community   : ($navy,       $white,  $tan),
+$about-colors: (// background   font     border       underline
+    heritage    : ($tan,        $black,  $rosewood,   "navy"),
+    quality     : ($rosewood,   $white,  $navy,       "tan"),
+    community   : ($navy,       $white,  $tan,        "rosewood"),
 );
-$menu-colors: (// background   border
-    specials   : ($yellow,     $purple),
-    chicken    : ($blue,       $green),
-    platters   : ($purple,     $orange),
-    burritos   : ($green,      $yellow),
-    burgers    : ($red,        $orange),
-    breakfast  : ($purple,     $red),
-    kids       : ($blue,       $green),
-    sides      : ($yellow,     $purple),
-    drinks     : ($red,        $blue),
-    desserts   : ($purple,     $yellow),
+$menu-colors: (// background   border      underline
+    specials   : ($yellow,     $purple,    "purple"),
+    chicken    : ($blue,       $green,     "blue"),
+    platters   : ($purple,     $orange,    "purple"),
+    burritos   : ($green,      $yellow,    "green"),
+    burgers    : ($red,        $orange,    "red"),
+    breakfast  : ($purple,     $red,       "purple"),
+    kids       : ($blue,       $green,     "blue"),
+    sides      : ($yellow,     $purple,    "purple"),
+    drinks     : ($red,        $blue,      "red"),
+    desserts   : ($purple,     $yellow,    "purple"),
 );

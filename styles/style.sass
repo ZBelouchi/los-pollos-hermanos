@@ -22,11 +22,10 @@ a
     text-decoration: none
 h1, h2, h3
     font-family: $header
-    // font-family: $stylized
-    // text-transform: capitalize
-    // scale: 1.2
-    margin: 0.4em 0
+    width: fit-content
+    margin: 0.4em auto
     text-align: center
+  
 
 .section
     padding: 1em 0
@@ -54,10 +53,9 @@ h1, h2, h3
         background: lighten($red, 6)
         
 .list
-    width: fit-content
-    margin: auto
-    list-style: initial
-
+    li
+        width: fit-content
+        margin: auto
 
 
 // Global
@@ -175,6 +173,8 @@ h1, h2, h3
         width: 100%
         padding: 0.5em 1em
         text-align: center
+    &__header
+        @include zigzag-underline($color: "navy")
     &__img
         width: fit-content
         height: 100%
@@ -197,9 +197,13 @@ h1, h2, h3
             margin: initial
     &__text
         padding: 0.5em 0.8em
+    &__header
+        @include zigzag-underline($color: "black")
     &__btn
         margin: 0.5em auto
 .social
+    &__header--main
+        @include zigzag-underline($color: "navy")
     &__icons
         width: fit-content
         margin: auto
@@ -270,7 +274,7 @@ h1, h2, h3
     &__group
         &:nth-of-type(even) > .row
             @include md
-                flex-flow: row-reverse   
+                flex-flow: row-reverse  
     &__box
         display: flex
         flex-direction: column
@@ -281,6 +285,8 @@ h1, h2, h3
         @include blurred-overlay
         border-radius: 4px
         text-align: center
+    &__header
+        @include stylized-text
     &__name
         font-weight: bold
     &__desc
@@ -289,6 +295,7 @@ h1, h2, h3
         display: flex
         flex-direction: column
         justify-content: center
+        margin: 0.75em 0
         &-img
             max-height: 620px
             object-fit: cover
@@ -304,6 +311,8 @@ h1, h2, h3
                 @include jagged
             img
                 @include handdrawn-border(nth(map-get($menu-colors, $key), 2), 11px)
+        &__#{$key} &__header
+            @include zigzag-underline($color: nth(map-get($menu-colors, $key), 3))
 
 // About Us
 .story
@@ -312,6 +321,8 @@ h1, h2, h3
     background-position: center
     color: black
     text-align: center
+    &__header
+        @include zigzag-underline($color: "navy")
     &__text
         padding: 0.5em
         border-radius: 4px
@@ -333,20 +344,37 @@ h1, h2, h3
             color: nth(map-get($about-colors, $key), 2)
             img
                 @include handdrawn-border(nth(map-get($about-colors, $key), 3), 11px)
+        &--#{$key} &__header
+            @include zigzag-underline($color: nth(map-get($about-colors, $key), 4))
+
 
 // Careers
 .career
+    text-align: center
     &--top
-        text-align: center
         @include background-pattern($red)
         color: white
         .container
             max-width: 600px
     &__text
         padding: 1em
+    &__list
+        margin: 0.4em
+        font-size: 0.95rem
+    &__photo
+        display: flex
+        justify-content: center
+        max-height: 420px
+        // border: 4px solid magenta
+        img
+            // border: 4px solid lime
+            object-fit: cover
+            @include handdrawn-border($rosewood, 5px)
+    &__btn
+        margin: 0.3em auto
+.apply, .submitted
     &__btn
         margin: 0.5em auto
-.apply, .submitted
     @include center($position: fixed)
     padding: 2em
     .apply

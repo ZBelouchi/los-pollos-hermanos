@@ -32,6 +32,14 @@
     border: solid $width $color;
 }
 
+@mixin zigzag-underline($color: "black", $size: 0.15em) {
+    padding-bottom: 0.2em;
+    border-bottom: 0.5em solid;
+    border-image-source: url('../../assets/patterns/zigzag-#{$color}.png');
+    border-image-slice: 151;
+    border-image-repeat: repeat;
+}
+
 @mixin row-gap($gap, $direction: "left") {
     & + & {
         margin-#{$direction}: $gap;
@@ -43,4 +51,11 @@
     margin: $margin;
     text-align: if($centered, center, inherit);
     text-transform: if($uppercase, uppercase, none);
+}
+
+@mixin stylized-text() {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    scale: 1.1;
+    font-family: 'JI_Burrito';
 }
