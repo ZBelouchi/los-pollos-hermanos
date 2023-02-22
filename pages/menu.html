@@ -15,7 +15,9 @@
     <!-- Navbar -->
     <header class="section nav">
         <div class="container container--wide nav__row">
-            <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            <a href="../index.html" class="nav__logo-box">
+                <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            </a>
             <img src="../assets/icons/hamburger.png" alt="button" class="nav__button" onclick="dropDown()">
             <ul class="nav__list" id="nav__list">
                 <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
@@ -27,7 +29,7 @@
     </header>
 
     <!-- Menu Navigation -->
-    <section class="section menu-nav">
+    <nav class="section menu-nav">
         <div class="container container--nav">
             <ul class="menu-nav__list">
                 <li class="menu-nav__item"><a href="#menu-specials" class="menu-nav__link">Specials</a></li>
@@ -42,347 +44,343 @@
                 <li class="menu-nav__item"><a href="#menu-desserts" class="menu-nav__link">Desserts</a></li>
             </ul>
         </div>
-    </section>
+    </nav>
 
     <!-- Menu -->
-    <section class="section menu">
+    <main class="section menu">
         <!-- Specials -->
-        <div class="menu__specials menu__group" id="menu-specials">
+        <section class="menu__specials menu__group" id="menu-specials">
             <div class="container row">
                 <div class="menu__box col">
                     <div class="menu__textbox">
                         <h2 class="menu__header">Specials</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">The Fring</p>
-                            <p class="menu__desc">ABQ Hot Chicken Sandwich, Curly Fries & Coleslaw.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">The Arciniega</p>
-                            <p class="menu__desc">Pollos Tenders, Curly Fries & Coleslaw.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">The Schuler</p>
-                            <p class="menu__desc">ABQ Hot Chicken Sandwich, Pollos Tenders, Curly Fries & Coleslaw.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">The Goodman</p>
-                            <p class="menu__desc">4 ABQ Hot Chicken Sandwich, 4 Pollos Tenders, 4 Curly Fries & 4 Coleslaw.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/special.png" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Chicken -->
-        <div class="menu__chicken menu__group" id="menu-chicken">
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Chicken</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">ABQ Chicken Sandwich</p>
-                            <p class="menu__desc">A delicious fried chicken sandwich smothered in spicy seasoning and topped off with a buttery brioche bun.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollos Tenders</p>
-                            <p class="menu__desc">2pc. Crispy tenders fried to perfection, sure to satisfy anyone's appetite.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollos by the Bucket</p>
-                            <p class="menu__desc">Pollos Original Recipe or Caliente<br>6pc, 8pc, 12pc or 16pc</p>
-                        </div>
-                        
-                        <h2 class="menu__header">Sauces</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">505 Barbeque Sauce</p>
-                            <p class="menu__desc">Albequerque's own barbeque sauce with a kick.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Chef's Ranch</p>
-                            <p class="menu__desc">A delectable creamy ranch mixed with an array of spices.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Remoulade</p>
-                            <p class="menu__desc">A tasty and scrumptious sauce that is rich, tangy and creamy.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/chicken.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Platters -->
-        <div class="menu__platters menu__group" id="menu-platters">
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Chicken Platters</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollo Adovada</p>
-                            <p class="menu__desc">A traditional Mexican adobo marinated baked chicken.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollo Picante</p>
-                            <p class="menu__desc">A very spicy, rich, and satisfying traditional bolivian chicken dish.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollo Mexicano</p>
-                            <p class="menu__desc">A flavorful comfort food chicken soup with chicken, vegetables, peppers, and cilantro.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Guiso De Pollo</p>
-                            <p class="menu__desc">A simple but delicious peruvian chicken stew.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollo Picado</p>
-                            <p class="menu__desc">Chopped chicken with green peppers, onions and tomatoes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/platter.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Burritos -->
-        <div class="menu__burritos menu__group" id="menu-burritos">
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Burritos</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">Westside</p>
-                            <p class="menu__desc">Refried beans and green chiles</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">New Mexico</p>
-                            <p class="menu__desc">Shredded hash browns and New Mexico chiles</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Albuquerque</p>
-                            <p class="menu__desc">Chicken with green and red chiles.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">South Valley</p>
-                            <p class="menu__desc">Chorizo and red chiles.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Rio Grande</p>
-                            <p class="menu__desc">Carne Adovada with red chiles.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/burrito.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Burgers -->
-        <div class="menu__burgers menu__group" id="menu-burgers">
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Burgers</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">All American Burger</p>
-                            <p class="menu__desc">pickle, lettuce, tomato and onion.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Green Chile Cheese Burger</p>
-                            <p class="menu__desc">w/ green chiles and cheese.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">California Burger</p>
-                            <p class="menu__desc">w/ bacon and guacamole.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Double Meat Double Cheese</p>
-                            <p class="menu__desc">double decker w/ additional patty, cheese and bacon.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Twister Burger</p>
-                            <p class="menu__desc">open faced w/ red chile, cheese, lettuce, tomato and onion.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/burger.png" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Breakfast -->
-        <div class="menu__breakfast menu__group" id="menu-breakfast">
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Breakfast</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">Huevos Rancheros</p>
-                            <p class="menu__desc">Eggs served in ranchero sauce with roasted tomatoes, ancho chiles and chipotles.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollos Breakfast Burrito</p>
-                            <p class="menu__desc">Egg, cheese, sausage, tomato and green chiles.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollos Chicken Biscuit</p>
-                            <p class="menu__desc">2pc. chicken with a biscuit and gravy.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollos Breakfast Sandwich</p>
-                            <p class="menu__desc">chicken sandwich on a biscuit with egg and cheese.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Pollos Breakfast Tacos</p>
-                            <p class="menu__desc">flatbread tacos with egg, cheese, tomato and green chiles.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/breakfast.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Kids -->
-        <div class="menu__kids menu__group" id="menu-kids">
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Kids Breakfast</h2>
-                            <p>Choice of:</p>
-                            <ul class="list">
-                                <li class="menu__name">French Toast Sticks.</li>
-                                <li class="menu__name">Egg & Cheese Burrito.</li>
-                                <li class="menu__name">Silver Dollar Pancakes.</li>
-                            </ul>
-                            <p>with orange juice</p>
-                    </div>
-                </div>
-                <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/kids-breakfast.jpg" alt="">
-                </div>
-            </div>
-            <div class="container row">
-                <div class="menu__box col">
-                    <div class="menu__textbox">
-                        <h2 class="menu__header">Kids Lunch</h2>
-                        <p>Choice of:</p>
-                        <ul class="list">
-                            <li class="menu__name">Corn Dog.</li>
-                            <li class="menu__name">Taco.</li>
-                            <li class="menu__name">Chicken Nuggets.</li>
-                            <li class="menu__name">Beef Burrito.</li>
-                            <li class="menu__name">Beef & Cheese burrito.</li>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">The Fring</p>
+                                <p class="menu__desc">ABQ Hot Chicken Sandwich, Curly Fries & Coleslaw.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">The Arciniega</p>
+                                <p class="menu__desc">Pollos Tenders, Curly Fries & Coleslaw.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">The Schuler</p>
+                                <p class="menu__desc">ABQ Hot Chicken Sandwich, Pollos Tenders, Curly Fries & Coleslaw.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">The Goodman</p>
+                                <p class="menu__desc">4 ABQ Hot Chicken Sandwich, 4 Pollos Tenders, 4 Curly Fries & 4 Coleslaw.</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/kids-lunch.jpg" alt="">
+                    <img class="menu__photo-img" src="../assets/menu/special.png" alt="platter of chicken specials">
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Chicken -->
+        <section class="menu__chicken menu__group" id="menu-chicken">
+            <div class="container row">
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Chicken</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">ABQ Chicken Sandwich</p>
+                                <p class="menu__desc">A delicious fried chicken sandwich smothered in spicy seasoning and topped off with a buttery brioche bun.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollos Tenders</p>
+                                <p class="menu__desc">2pc. Crispy tenders fried to perfection, sure to satisfy anyone's appetite.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollos by the Bucket</p>
+                                <p class="menu__desc">Pollos Original Recipe or Caliente<br>6pc, 8pc, 12pc or 16pc</p>
+                            </li>
+                        </ul>
+                        
+                        <h2 class="menu__header">Sauces</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">505 Barbeque Sauce</p>
+                                <p class="menu__desc">Albequerque's own barbeque sauce with a kick.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Chef's Ranch</p>
+                                <p class="menu__desc">A delectable creamy ranch mixed with an array of spices.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Remoulade</p>
+                                <p class="menu__desc">A tasty and scrumptious sauce that is rich, tangy and creamy.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__photo col">
+                    <img class="menu__photo-img" src="../assets/menu/chicken.jpg" alt="chicken dipped in sauce">
+                </div>
+            </div>
+        </section>
+        <!-- Platters -->
+        <section class="menu__platters menu__group" id="menu-platters">
+            <div class="container row">
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Chicken Platters</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">Pollo Adovada</p>
+                                <p class="menu__desc">A traditional Mexican adobo marinated baked chicken.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollo Picante</p>
+                                <p class="menu__desc">A very spicy, rich, and satisfying traditional bolivian chicken dish.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollo Mexicano</p>
+                                <p class="menu__desc">A flavorful comfort food chicken soup with chicken, vegetables, peppers, and cilantro.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Guiso De Pollo</p>
+                                <p class="menu__desc">A simple but delicious peruvian chicken stew.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollo Picado</p>
+                                <p class="menu__desc">Chopped chicken with green peppers, onions and tomatoes.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__photo col">
+                    <img class="menu__photo-img" src="../assets/menu/platter.jpg" alt="chicken platter">
+                </div>
+            </div>
+        </section>
+        <!-- Burritos -->
+        <section class="menu__burritos menu__group" id="menu-burritos">
+            <div class="container row">
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Burritos</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">Westside</p>
+                                <p class="menu__desc">Refried beans and green chiles</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">New Mexico</p>
+                                <p class="menu__desc">Shredded hash browns and New Mexico chiles</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Albuquerque</p>
+                                <p class="menu__desc">Chicken with green and red chiles.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">South Valley</p>
+                                <p class="menu__desc">Chorizo and red chiles.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Rio Grande</p>
+                                <p class="menu__desc">Carne Adovada with red chiles.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__photo col">
+                    <img class="menu__photo-img" src="../assets/menu/burrito.jpg" alt="burrito">
+                </div>
+            </div>
+        </section>
+        <!-- Burgers -->
+        <section class="menu__burgers menu__group" id="menu-burgers">
+            <div class="container row">
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Burgers</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">All American Burger</p>
+                                <p class="menu__desc">pickle, lettuce, tomato and onion.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Green Chile Cheese Burger</p>
+                                <p class="menu__desc">w/ green chiles and cheese.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">California Burger</p>
+                                <p class="menu__desc">w/ bacon and guacamole.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Double Meat Double Cheese</p>
+                                <p class="menu__desc">double decker w/ additional patty, cheese and bacon.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Twister Burger</p>
+                                <p class="menu__desc">open faced w/ red chile, cheese, lettuce, tomato and onion.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__photo col">
+                    <img class="menu__photo-img" src="../assets/menu/burger.png" alt="burger">
+                </div>
+            </div>
+        </section>
+        <!-- Breakfast -->
+        <section class="menu__breakfast menu__group" id="menu-breakfast">
+            <div class="container row">
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Breakfast</h2>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">Huevos Rancheros</p>
+                                <p class="menu__desc">Eggs served in ranchero sauce with roasted tomatoes, ancho chiles and chipotles.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollos Breakfast Burrito</p>
+                                <p class="menu__desc">Egg, cheese, sausage, tomato and green chiles.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollos Chicken Biscuit</p>
+                                <p class="menu__desc">2pc. chicken with a biscuit and gravy.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollos Breakfast Sandwich</p>
+                                <p class="menu__desc">chicken sandwich on a biscuit with egg and cheese.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Pollos Breakfast Tacos</p>
+                                <p class="menu__desc">flatbread tacos with egg, cheese, tomato and green chiles.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__photo col">
+                    <img class="menu__photo-img" src="../assets/menu/breakfast.jpg" alt="breakfast burrito">
+                </div>
+            </div>
+        </section>
+        <!-- Kids' -->
+        <section class="menu__kids menu__group row" id="menu-kids">
+            <div class="container row">
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Kids Breakfast</h2>
+                        <p class="menu__name">Choice of:</p>
+                        <ul class="list">
+                            <li class="menu__desc">French Toast Sticks.</li>
+                            <li class="menu__desc">Egg & Cheese Burrito.</li>
+                            <li class="menu__desc">Silver Dollar Pancakes.</li>
+                        </ul>
+                        <p>with orange juice</p>
+                    </div>
+                    <div class="menu__photo">
+                        <img class="menu__photo-img" src="../assets/menu/kids-breakfast.jpg" alt="french toast sticks">
+                    </div>
+                </div>
+                <div class="menu__box col">
+                    <div class="menu__textbox">
+                        <h2 class="menu__header">Kids Lunch</h2>
+                        <p class="menu__name">Choice of:</p>
+                        <ul class="list">
+                            <li class="menu__desc">Corn Dog.</li>
+                            <li class="menu__desc">Taco.</li>
+                            <li class="menu__desc">Chicken Nuggets.</li>
+                            <li class="menu__desc">Beef Burrito.</li>
+                            <li class="menu__desc">Beef & Cheese burrito.</li>
+                        </ul>
+                    </div>
+                    <div class="menu__photo">
+                        <img class="menu__photo-img" src="../assets/menu/kids-lunch.jpg" alt="soft taco">
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Sides -->
-        <div class="menu__sides menu__group" id="menu-sides">
+        <section class="menu__sides menu__group" id="menu-sides">
             <div class="container row">
                 <div class="menu__box col">
                     <div class="menu__textbox">
                         <h2 class="menu__header">Sides</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">Curly Fries</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Coleslaw</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Taco</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Green Chile Cheese Fries</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Chips & Homemade Salsa</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Chicken Nuggets</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Corn Dog</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Taco</p>
+                        <div class="row">
+                            <ul class="menu__list col">
+                                <li class="menu__item"><p class="menu__name">Curly Fries</p></li>
+                                <li class="menu__item"><p class="menu__name">Coleslaw</p></li>
+                                <li class="menu__item"><p class="menu__name">Taco</p></li>
+                                <li class="menu__item"><p class="menu__name">Green Chile Cheese Fries</p></li>
+                            </ul>
+                            <ul class="menu__list col">
+                                <li class="menu__item"><p class="menu__name">Chips & Homemade Salsa</p></li>
+                                <li class="menu__item"><p class="menu__name">Chicken Nuggets</p></li>
+                                <li class="menu__item"><p class="menu__name">Corn Dog</p></li>
+                                <li class="menu__item"><p class="menu__name">Taco</p></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/side.jpg" alt="">
+                    <img class="menu__photo-img" src="../assets/menu/side.jpg" alt="curly fries">
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Drinks -->
-        <div class="menu__drinks menu__group" id="menu-drinks">
+        <section class="menu__drinks menu__group" id="menu-drinks">
             <div class="container row">
                 <div class="menu__box col">
                     <div class="menu__textbox">
                         <h2 class="menu__header">Drinks</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">Iced Tea</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Soda</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Coffee</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Orange Juice</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Bottled Water</p>
-                        </div>
+                        <ul class="menu__list">
+                            <li class="menu__item"><p class="menu__name">Iced Tea</p></li>
+                            <li class="menu__item"><p class="menu__name">Soda</p></li>
+                            <li class="menu__item"><p class="menu__name">Coffee</p></li>
+                            <li class="menu__item"><p class="menu__name">Orange Juice</p></li>
+                            <li class="menu__item"><p class="menu__name">Bottled Water</p></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/drink.jpg" alt="">
+                    <img class="menu__photo-img" src="../assets/menu/drink.jpg" alt="coca cola">
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Desserts -->
-        <div class="menu__desserts menu__group" id="menu-desserts">
+        <section class="menu__desserts menu__group" id="menu-desserts">
             <div class="container row">
                 <div class="menu__box col">
                     <div class="menu__textbox">
                         <h2 class="menu__header">Desserts</h2>
-                        <div class="menu__item">
-                            <p class="menu__name">Apple Bites</p>
-                            <p class="menu__desc">bag of sliced up apples.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Churros</p>
-                            <p class="menu__desc">bite sized fried dough topped with cinnamon sugar.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Mole</p>
-                            <p class="menu__desc">seeds and nuts in a sweet and spicy mole sauce.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Dulce de Leche Cake</p>
-                            <p class="menu__desc">dulce de leche based cake topped with caramelized sugar.</p>
-                        </div>
-                        <div class="menu__item">
-                            <p class="menu__name">Alfajores</p>
-                            <p class="menu__desc">dulce de leche, sandwiched in two butter cookies, rolled in coconut.</p>
-                        </div>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <p class="menu__name">Apple Bites</p>
+                                <p class="menu__desc">bag of sliced up apples.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Churros</p>
+                                <p class="menu__desc">bite sized fried dough topped with cinnamon sugar.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Mole</p>
+                                <p class="menu__desc">seeds and nuts in a sweet and spicy mole sauce.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Dulce de Leche Cake</p>
+                                <p class="menu__desc">dulce de leche based cake topped with caramelized sugar.</p>
+                            </li>
+                            <li class="menu__item">
+                                <p class="menu__name">Alfajores</p>
+                                <p class="menu__desc">dulce de leche, sandwiched in two butter cookies, rolled in coconut.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="menu__photo menu__photo col">
-                    <img class="menu__photo-img" src="../assets/menu/dessert.jpg" alt="">
+                    <img class="menu__photo-img" src="../assets/menu/dessert.jpg" alt="dulce de leche cake">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     
 
     <!-- Footer -->

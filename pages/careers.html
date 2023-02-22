@@ -15,7 +15,9 @@
     <!-- Navbar -->
     <header class="section nav">
         <div class="container container--wide nav__row">
-            <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            <a href="../index.html" class="nav__logo-box">
+                <img src="../assets/logo1.png" alt="logo" class="nav__logo">
+            </a>
             <img src="../assets/icons/hamburger.png" alt="button" class="nav__button" onclick="dropDown()">
             <ul class="nav__list" id="nav__list">
                 <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
@@ -30,7 +32,7 @@
     <section class="section career career--top">
         <div class="career__text container">
             <h1 class="career__header">Join the Los Pollos Hermanos family!</h1>
-            <p>We take pride in everything we do, and in order to do that we expect all team members to meet our service expectations. Every day our staff serves our customers exceptional food with impeccable service, that is the Los Pollos Way.</p>
+            <p>We take pride in everything we do, and in order to do that we expect all team members to meet our service expectations. Every day our staff serves our customers exceptional food with impeccable service, that is the Los Pollos Hermanos Way.</p>
         </div>
     </section>
     <section class="section career career--bottom">
@@ -39,20 +41,20 @@
                 <div class="career__text col">
                     <h2>Employees must have excellent:</h2>
                     <ul class="career__list list">
-                        <li class="career__item">Communication</li>
-                        <li class="career__item">Cleanliness</li>
-                        <li class="career__item">Attention to Detail</li>
-                        <li class="career__item">Customer Service</li>
-                        <li class="career__item">Work Ethic</li>
+                        <li class="career__item">Communication,</li>
+                        <li class="career__item">Cleanliness,</li>
+                        <li class="career__item">Attention to Detail,</li>
+                        <li class="career__item">Customer Service, and</li>
+                        <li class="career__item">Work Ethic.</li>
                     </ul>
-                    <p>If you possess these qualities, then please apply. Our doors are always open.</p>
+                    <p>If you possess these qualities and wish to join us, then please apply. Our doors are always open.</p>
                 </div>
 
-                <div class="career__img">
-                    <img src="../assets/employee.jpg" alt="employee photo">
+                <div class="career__photo col">
+                    <img src="../assets/employee.jpg" alt="employee" class="career__img">
                 </div>
             </div>
-            <button class="btn career__btn" onclick="document.getElementById('applyModal').showModal()">Apply Now!</button>
+            <button class="btn career__btn" onclick="openApply()">Apply Now!</button>
         </div>
     </section>
 
@@ -78,11 +80,16 @@
                 <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="" name="phone" id="apply-phone" class="apply__field" required>
             </div>
             <div class="apply__box">
-                <label for="apply-resume" class="apply__label">Attach Resume:</label>
-                <input type="file" name="resume" id="apply-resume" class="apply__field" required>
+                <label for="apply-resume" class="apply__label">(opt.) Attach Resume:</label>
+                <input type="file" name="resume" id="apply-resume" class="apply__field">
             </div>
             <input type="submit" class="apply__submit btn">
         </form>
+    </dialog>
+
+    <dialog class="submitted" id="submittedModal">
+        <img src="../assets//icons/close.png" alt="close button" class="close apply__close" onclick="closeSubmitted()">
+        <h2 class="submitted__text">Thank you for your application!</h2>
     </dialog>
 
     <!-- Footer -->
