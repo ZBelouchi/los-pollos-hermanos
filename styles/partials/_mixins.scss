@@ -35,7 +35,7 @@
 @mixin zigzag-underline($color: "black", $size: 0.15em) {
     padding-bottom: 0.2em;
     border-bottom: 0.5em solid;
-    border-image-source: url('../../assets/patterns/zigzag-#{$color}.png');
+    border-image-source: url('../assets/patterns/zigzag-#{$color}.png');
     border-image-slice: 151;
     border-image-repeat: repeat;
 }
